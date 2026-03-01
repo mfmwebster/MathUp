@@ -1,0 +1,347 @@
+﻿[
+  {
+    "week": 1,
+    "unit": "CARPANLAR VE KATLAR",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.1.1. Verilen pozitif tamsayilarin carpalarini bulur",
+      "M.8.1.1.2. Iki dogal sayinin EBOB ve EKOK'unu hesaplar"
+    ],
+    "description": "Pozitif tam sayilarin asal carpanlarini bulma, EBOB-EKOK hesaplama"
+  },
+  {
+    "week": 2,
+    "unit": "CARPANLAR VE KATLAR",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.1.2. EBOB-EKOK problemlerini cozer",
+      "M.8.1.1.3. Iki dogal sayinin aralarinda asal olup olmadigini belirler"
+    ],
+    "description": "Aralarinda asal sayilar, yardimlasma degerleri"
+  },
+  {
+    "week": 3,
+    "unit": "USLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.2.1. Tam sayilarin tam sayi kuvvetlerini hesaplar",
+      "M.8.1.2.2. Uslu ifadelerle ilgili temel kurallari anlar"
+    ],
+    "description": "Uslu sayilar, carpma kurallari"
+  },
+  {
+    "week": 4,
+    "unit": "USLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.2.3. Sayilarin ondalik gosterimlerini cozumler",
+      "M.8.1.2.4. Verilen sayiyi 10'un kuvvetleriyle ifade eder"
+    ],
+    "description": "Ondalik gosterim, bilimsel gosterime giris"
+  },
+  {
+    "week": 5,
+    "unit": "USLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.2.5. Cok buyuk ve cok kucuk sayilari bilimsel gosterimle ifade eder"
+    ],
+    "description": "Bilimsel gosterim, bilimsellik degeri"
+  },
+  {
+    "week": 6,
+    "unit": "KAREKOKLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.3.1. Tam kare pozitif sayilarla karekokleri arasindaki iliskiyi belirler",
+      "M.8.1.3.2. Tam kare olmayan karekoklu sayinin hangi iki dogal sayi arasinda oldugunu belirler"
+    ],
+    "description": "Karekok kavrami, tam kare sayilar"
+  },
+  {
+    "week": 7,
+    "unit": "KAREKOKLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.3.3. Karekoklu ifadeyi a√b seklinde yazar",
+      "M.8.1.3.4. Karekoklu ifadelerde carpma ve bolme islemleri yapar"
+    ],
+    "description": "Karekoklu ifadelerde islemler"
+  },
+  {
+    "week": 8,
+    "unit": "KAREKOKLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.3.5. Karekoklu ifadelerde toplama ve cikarma islemleri yapar"
+    ],
+    "description": "Benzer karekoklu ifadeler"
+  },
+  {
+    "week": 9,
+    "unit": "KAREKOKLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.3.6. Karekoklu ifadeyle carpildiginda sonucu dogal sayi yapan carpanlara ornek verir",
+      "M.8.1.3.7. Ondalik ifadelerin karekoklerini belirler"
+    ],
+    "description": "Rasyonellestirme, ondalik karekokler"
+  },
+  {
+    "week": 10,
+    "unit": "KAREKOKLU IFADELER",
+    "learningArea": "SAYILAR VE ISLEMLER",
+    "objectives": [
+      "M.8.1.3.8. Gercel sayilari tanir, rasyonel ve irrasyonel sayilarla iliskilendirir"
+    ],
+    "description": "Irrasyonel sayilar, pi sayisi"
+  },
+  {
+    "week": 11,
+    "unit": "VERI ANALIZI",
+    "learningArea": "VERI ISLEME",
+    "objectives": [
+      "M.8.4.1.1. En fazla uc veri grubuna ait cizgi ve sutun grafiklerini yorumlar"
+    ],
+    "description": "Grafik okuma, yorumlama"
+  },
+  {
+    "week": 12,
+    "unit": "VERI ANALIZI",
+    "learningArea": "VERI ISLEME",
+    "objectives": [
+      "M.8.4.1.2. Verileri sutun, daire veya cizgi grafigi ile gosterir"
+    ],
+    "description": "Grafik cizme, donusumler"
+  },
+  {
+    "week": 13,
+    "unit": "BASIT OLAYLARIN OLMA OLASILIGI",
+    "learningArea": "OLASILIK",
+    "objectives": [
+      "M.8.5.1.1. Bir olaya ait olasi durumlari belirler",
+      "M.8.5.1.2. Daha fazla, esit, daha az olasilikli olaylari ayirt eder"
+    ],
+    "description": "Olasilik kavrami, olasi durumlar"
+  },
+  {
+    "week": 14,
+    "unit": "BASIT OLAYLARIN OLMA OLASILIGI",
+    "learningArea": "OLASILIK",
+    "objectives": [
+      "M.8.5.1.3. Esit sansa sahip olaylarda her bir ciktinin olasilik degerinin esit oldugunu aciklar",
+      "M.8.5.1.4. Olasilik degerinin 0-1 arasinda oldugunu anlar"
+    ],
+    "description": "Esit olasilik, olasilik degeri araligi"
+  },
+  {
+    "week": 15,
+    "unit": "BASIT OLAYLARIN OLMA OLASILIGI",
+    "learningArea": "OLASILIK",
+    "objectives": [
+      "M.8.5.1.5. Basit bir olayin olma olasiligini hesaplar"
+    ],
+    "description": "Olasilik hesaplama, hosgoru degeri"
+  },
+  {
+    "week": 16,
+    "unit": "CEBIRSEL IFADELER VE OZDESLIKLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.1.1. Basit cebirsel ifadeleri anlar ve farkli bicimlerde yazar",
+      "M.8.2.1.2. Cebirsel ifadelerin carpimini yapar"
+    ],
+    "description": "Cebirsel ifadeler, terim-katsayi"
+  },
+  {
+    "week": 17,
+    "unit": "CEBIRSEL IFADELER VE OZDESLIKLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.1.3. Ozdeslikleri modellerle aciklar"
+    ],
+    "description": "(a±b)²=a²±2ab+b², a²-b²=(a-b)(a+b)"
+  },
+  {
+    "week": 18,
+    "unit": "CEBIRSEL IFADELER VE OZDESLIKLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.1.4. Cebirsel ifadeleri carpanlara ayirir"
+    ],
+    "description": "Ortak carpan parantezine alma, iki kare farki"
+  },
+  {
+    "week": 19,
+    "unit": "DOGRUSAL DENKLEMLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.2.1. Birinci dereceden bir bilinmeyenli denklemleri cozer"
+    ],
+    "description": "Denklem cozme, rasyonel katsayilar"
+  },
+  {
+    "week": 20,
+    "unit": "DOGRUSAL DENKLEMLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.2.2. Koordinat sistemini ozellikleriyle tanir",
+      "M.8.2.2.3. Dogrusal iliskiyi tablo ve denklem ile ifade eder"
+    ],
+    "description": "Koordinat duzlemi, dogrusal iliski"
+  },
+  {
+    "week": 21,
+    "unit": "DOGRUSAL DENKLEMLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.2.4. Dogrusal denklemlerin grafigini cizer",
+      "M.8.2.2.5. Dogrusal iliski iceren gercek hayat durumlarini yorumlar"
+    ],
+    "description": "Dogru grafigi, eksenlerde kesim noktalari"
+  },
+  {
+    "week": 22,
+    "unit": "DOGRUSAL DENKLEMLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.2.6. Dogrunun egimini modellerle aciklar"
+    ],
+    "description": "Egim kavrami, iyilik degeri (engelli rampalari)"
+  },
+  {
+    "week": 23,
+    "unit": "ESITSIZLIKLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.3.1. Birinci dereceden esitsizlik iceren durumlara uygun matematik cumleleri yazar",
+      "M.8.2.3.2. Esitsizlikleri sayi dogrusunda gosterir"
+    ],
+    "description": "Esitsizlik kavrami, sayi dogrusu gosterimi"
+  },
+  {
+    "week": 24,
+    "unit": "ESITSIZLIKLER",
+    "learningArea": "CEBIR",
+    "objectives": [
+      "M.8.2.3.3. Birinci dereceden esitsizlikleri cozer"
+    ],
+    "description": "Esitsizlik cozme, yon degistirme, adalet degeri"
+  },
+  {
+    "week": 25,
+    "unit": "UCGENLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.1.1. Ucgende kenarortay, aciortay ve yuksekligi insa eder"
+    ],
+    "description": "Ucgen elemanlari, ozel ucgenlerde ozellikler"
+  },
+  {
+    "week": 26,
+    "unit": "UCGENLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.1.2. Ucgenin iki kenar toplami/farki ile ucuncu kenari iliskilendirir",
+      "M.8.3.1.3. Kenar uzunluklari ile karsi aci olculerini iliskilendirir"
+    ],
+    "description": "Ucgen esitsizligi, buyuk kenar-buyuk aci"
+  },
+  {
+    "week": 27,
+    "unit": "UCGENLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.1.4. Yeterli elemani verilen ucgeni cizer",
+      "M.8.3.1.5. Pisagor bagintisini olusturur"
+    ],
+    "description": "Ucgen cizimi, Pisagor teoremi, saygi degeri"
+  },
+  {
+    "week": 28,
+    "unit": "ESLIK VE BENZERLIK",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.3.1. Esik ve benzerligi iliskilendirir",
+      "M.8.3.3.2. Benzer cokgenlerin benzerlik oranini belirler"
+    ],
+    "description": "Es ve benzer sekiller, benzerlik orani"
+  },
+  {
+    "week": 29,
+    "unit": "DONUSUM GEOMETRISI",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.2.1. Oteleme sonucundaki goruntuleri cizer",
+      "M.8.3.2.2. Yansima sonucu olusan goruntuyu olusturur"
+    ],
+    "description": "Oteleme, yansima, simetri"
+  },
+  {
+    "week": 30,
+    "unit": "DONUSUM GEOMETRISI",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.2.3. Cokgenlerin oteleme ve yansima sonucu ortaya cikan goruntusunu olusturur"
+    ],
+    "description": "Ardisik donusumler, geleneksel sanatlar"
+  },
+  {
+    "week": 31,
+    "unit": "GEOMETRIK CISIMLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.4.1. Dik prizmalari tanir ve temel ozelliklerini belirler",
+      "M.8.3.4.2. Dik dairesel silindirin temel elemanlarini belirler"
+    ],
+    "description": "Prizma, silindir, açınım"
+  },
+  {
+    "week": 32,
+    "unit": "GEOMETRIK CISIMLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.4.3. Dik dairesel silindirin yuzey alani bagintisini olusturur",
+      "M.8.3.4.4. Dik dairesel silindirin hacim bagintisini olusturur"
+    ],
+    "description": "Silindir alan ve hacim"
+  },
+  {
+    "week": 33,
+    "unit": "GEOMETRIK CISIMLER",
+    "learningArea": "GEOMETRI VE OLÇME",
+    "objectives": [
+      "M.8.3.4.5. Dik piramidi tanir ve temel elemanlarini belirler",
+      "M.8.3.4.6. Dik koniyi tanir ve temel elemanlarini belirler"
+    ],
+    "description": "Piramit, koni, sorumluluk degeri"
+  },
+  {
+    "week": 34,
+    "unit": "TEKRAR VE PEKISTIRME",
+    "learningArea": "GENEL TEKRAR",
+    "objectives": ["Sayilar ve islemler tekrari"],
+    "description": "EBOB-EKOK, uslu-karekoklu ifadeler"
+  },
+  {
+    "week": 35,
+    "unit": "TEKRAR VE PEKISTIRME",
+    "learningArea": "GENEL TEKRAR",
+    "objectives": ["Cebir tekrari"],
+    "description": "Cebirsel ifadeler, denklemler, esitsizlikler"
+  },
+  {
+    "week": 36,
+    "unit": "TEKRAR VE PEKISTIRME",
+    "learningArea": "GENEL TEKRAR",
+    "objectives": ["Geometri tekrari"],
+    "description": "Ucgenler, benzerlik, donusumler, cisimler"
+  },
+  {
+    "week": 37,
+    "unit": "LGS HAZIRLIK",
+    "learningArea": "SINAV HAZIRLIK",
+    "objectives": ["LGS deneme ve degerlendirme"],
+    "description": "26 Haziran LGS'ye yonelik son calismalar"
+  }
+]
