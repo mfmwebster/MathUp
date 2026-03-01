@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import { useDatabase } from '../../hooks/useDatabase';
 import { useNavigate } from 'react-router-dom';
 import { 
-  Users, BookOpen, Calendar, TrendingUp, 
+  Users, Calendar, TrendingUp, 
   ChevronRight, Plus, Clock 
 } from 'lucide-react';
 import { 
@@ -16,7 +16,7 @@ import {
 import { Doughnut } from 'react-chartjs-2';
 import { 
   formatShortDate, getDayName, getInitials, 
-  formatCurrency, getWeeksUntilLGS, generatePastelColor 
+  formatCurrency, getWeeksUntilLGS
 } from '../../utils/helpers';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -27,12 +27,14 @@ const Dashboard = ({ teacher }) => {
   const [nextLesson, setNextLesson] = useState(null);
   const [topStudent, setTopStudent] = useState(null);
   const [financeData, setFinanceData] = useState({ expected: 0, collected: 0 });
-  const { getStudents, getExams } = useDatabase();
+  const { getStudents, getExams, isReady } = useDatabase();
   const navigate = useNavigate();
 
   useEffect(() => {
-    loadData();
-  }, []);
+    if (isReady) {
+      loadData();
+    }
+  }, [isReady]);
 
   const loadData = async () => {
     const [studentsData, examsData] = await Promise.all([
@@ -106,20 +108,107 @@ const Dashboard = ({ teacher }) => {
   };
 
   const calculateFinance = (students) => {
-    const expected = students.reduce((sum, s) => sum + (parseFloat(s.fee) || 0), 0);
-    const collected = expected * 0.7;
+    const getLessonAmount = (student, lesson) => {
+      const lessonAmount = parseFloat(lesson?.paymentAmount);
+      if (!Number.isNaN(lessonAmount) && lessonAmount > 0) {
+        return lessonAmount;
+      }
+      const unitFee = parseFloat(student?.initialFee);
+      if (!Number.isNaN(unitFee) && unitFee > 0) {
+        return unitFee;
+      }
+      const currentFee = parseFloat(student?.fee);
+      if (!Number.isNaN(currentFee) && currentFee > 0) {
+        return currentFee;
+      }
+      return 0;
+    };
+
+    const expected = students.reduce(
+      (sum, student) =>
+        sum + (student.schedule || []).reduce((lessonSum, lesson) => lessonSum + getLessonAmount(student, lesson), 0),
+      0
+    );
+    const collected = students.reduce(
+      (sum, student) =>
+        sum + (student.schedule || [])
+          .filter((lesson) => lesson.paymentStatus === 'collected')
+          .reduce((lessonSum, lesson) => lessonSum + getLessonAmount(student, lesson), 0),
+      0
+    );
     setFinanceData({ expected, collected });
   };
 
+  const getStudentFinance = (student) => {
+    const lessons = student.schedule || [];
+    const getLessonAmount = (lesson) => {
+      const lessonAmount = parseFloat(lesson?.paymentAmount);
+      if (!Number.isNaN(lessonAmount) && lessonAmount > 0) {
+        return lessonAmount;
+      }
+      const unitFee = parseFloat(student?.initialFee);
+      if (!Number.isNaN(unitFee) && unitFee > 0) {
+        return unitFee;
+      }
+      const currentFee = parseFloat(student?.fee);
+      if (!Number.isNaN(currentFee) && currentFee > 0) {
+        return currentFee;
+      }
+      return 0;
+    };
+
+    const expected = lessons.reduce((sum, lesson) => sum + getLessonAmount(lesson), 0);
+    const collected = lessons
+      .filter((lesson) => lesson.paymentStatus === 'collected')
+      .reduce((sum, lesson) => sum + getLessonAmount(lesson), 0);
+    return { expected, collected };
+  };
+
+  const portfolioColors = [
+    '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6',
+    '#ef4444', '#06b6d4', '#f97316', '#14b8a6',
+    '#6366f1', '#ec4899'
+  ];
+
+  const getStudentColor = (studentId) => {
+    const source = String(studentId || '0');
+    let hash = 0;
+    for (let i = 0; i < source.length; i++) {
+      hash = (hash * 31 + source.charCodeAt(i)) >>> 0;
+    }
+    return portfolioColors[hash % portfolioColors.length];
+  };
+
+  const studentPortfolio = students.map((student) => {
+    const fin = getStudentFinance(student);
+    return {
+      id: student.id,
+      name: student.fullName,
+      initials: getInitials(student.fullName),
+      collected: fin.collected,
+      color: getStudentColor(student.id)
+    };
+  });
+
+  const remaining = Math.max(financeData.expected - financeData.collected, 0);
+
+  const chartSegments = [
+    ...studentPortfolio
+      .filter((item) => item.collected > 0)
+      .map((item) => ({ label: item.name, value: item.collected, color: item.color, studentId: item.id })),
+    ...(remaining > 0 ? [{ label: 'Tahsil Edilmemiş', value: remaining, color: '#e5e7eb' }] : [])
+  ];
+
+  const safeChartSegments = chartSegments.length > 0
+    ? chartSegments
+    : [{ label: 'Veri yok', value: 1, color: '#e5e7eb' }];
+
   const doughnutData = {
-    labels: students.map(s => getInitials(s.fullName)),
+    labels: safeChartSegments.map((item) => item.label),
     datasets: [
       {
-        data: students.map(s => parseFloat(s.fee) || 0),
-        backgroundColor: [
-          '#3b82f6', '#ef4444', '#10b981', '#f59e0b', 
-          '#8b5cf6', '#ec4899', '#06b6d4', '#f97316'
-        ],
+        data: safeChartSegments.map((item) => item.value),
+        backgroundColor: safeChartSegments.map((item) => item.color),
         borderWidth: 2,
         borderColor: '#ffffff',
         hoverOffset: 4
@@ -138,12 +227,28 @@ const Dashboard = ({ teacher }) => {
       tooltip: {
         callbacks: {
           label: (context) => {
-            const student = students[context.dataIndex];
-            return student.fullName + ': ' + formatCurrency(context.raw);
+            const segment = safeChartSegments[context.dataIndex];
+            if ((segment?.label || context.label) === 'Veri yok') {
+              return 'Henüz finansal veri yok';
+            }
+            return `${segment?.label || context.label}: ${formatCurrency(context.raw)}`;
           }
         }
       }
     }
+  };
+
+  const collectionRate = financeData.expected > 0
+    ? (financeData.collected / financeData.expected) * 100
+    : 0;
+
+  const handleDoughnutClick = (event, elements) => {
+    if (!elements || elements.length === 0) return;
+    const segment = safeChartSegments[elements[0].index];
+    if (!segment?.studentId) return;
+
+    event?.native?.stopPropagation?.();
+    navigate(`/students/${segment.studentId}?tab=finance`);
   };
 
   const weeksUntilLGS = getWeeksUntilLGS();
@@ -189,16 +294,25 @@ const Dashboard = ({ teacher }) => {
           </div>
           <div className="h-32 relative">
             {students.length > 0 ? (
-              <Doughnut data={doughnutData} options={doughnutOptions} />
+              <>
+                <Doughnut data={doughnutData} options={doughnutOptions} onClick={handleDoughnutClick} />
+                <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                  <div className="text-center">
+                    <p className="text-[11px] text-gray-500">Tahsilat</p>
+                    <p className="text-lg font-bold text-gray-900">{collectionRate.toFixed(0)}%</p>
+                  </div>
+                </div>
+              </>
             ) : (
               <div className="flex items-center justify-center h-full text-gray-400 text-sm">
                 Öğrenci ekleyin
               </div>
             )}
           </div>
-          <p className="text-center text-sm text-gray-600 mt-2">
-            Hedef: {formatCurrency(financeData.expected)}
-          </p>
+          <div className="text-center text-xs text-gray-600 mt-2 space-y-0.5">
+            <p>Hedef: {formatCurrency(financeData.expected)}</p>
+            <p>Tahsil: {formatCurrency(financeData.collected)}</p>
+          </div>
         </div>
 
         <div 
@@ -257,35 +371,14 @@ const Dashboard = ({ teacher }) => {
         </div>
       </div>
 
-      <h2 className="section-title">Hizli Eylemler</h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+      <h2 className="section-title">Hızlı Eylemler</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
         <button 
           onClick={() => navigate('/students/new')}
           className="btn-secondary py-4 flex flex-col items-center gap-2"
         >
           <Plus className="w-6 h-6" />
           <span className="text-sm">Yeni Öğrenci</span>
-        </button>
-        <button 
-          onClick={() => navigate('/exams/new')}
-          className="btn-secondary py-4 flex flex-col items-center gap-2"
-        >
-          <BookOpen className="w-6 h-6" />
-          <span className="text-sm">Deneme Ekle</span>
-        </button>
-        <button 
-          onClick={() => navigate('/curriculum')}
-          className="btn-secondary py-4 flex flex-col items-center gap-2"
-        >
-          <Calendar className="w-6 h-6" />
-          <span className="text-sm">Müfredat</span>
-        </button>
-        <button 
-          onClick={() => navigate('/books')}
-          className="btn-secondary py-4 flex flex-col items-center gap-2"
-        >
-          <BookOpen className="w-6 h-6" />
-          <span className="text-sm">Kitaplar</span>
         </button>
       </div>
     </div>

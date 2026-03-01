@@ -10,21 +10,21 @@ import { useDatabase } from './hooks/useDatabase';
 
 import Login from './components/auth/Login';
 import Dashboard from './components/dashboard/Dashboard';
+import CalendarPage from './components/calendar/CalendarPage';
 import StudentList from './components/students/StudentList';
 import StudentForm from './components/students/StudentForm';
 import StudentDetail from './components/students/StudentDetail';
-import BookTracker from './components/books/BookTracker';
 import ExamList from './components/exams/ExamList';
 import ExamForm from './components/exams/ExamForm';
 import ErrorAnalysis from './components/exams/ErrorAnalysis';
 import Finance from './components/finance/Finance';
-import Curriculum from './components/dashboard/Curriculum';
+import Settings from './components/settings/Settings';
 import BottomNav from './components/layout/BottomNav';
 
 function App() {
   const [teacher, setTeacher] = useState(null);
   const [loading, setLoading] = useState(true);
-  const { isReady, getTeacher } = useDatabase();
+  const { isReady, getTeacher, seedInitialData } = useDatabase();
   const location = useLocation();
 
   useEffect(() => {
@@ -34,6 +34,13 @@ function App() {
   }, [isReady]);
 
   const checkAuth = async () => {
+    // Ensure initial data exists (teacher + students) and then read teacher
+    try {
+      await seedInitialData();
+    } catch (e) {
+      // ignore seeding errors
+    }
+
     const savedTeacher = await getTeacher();
     if (savedTeacher) {
       setTeacher(savedTeacher);
@@ -71,16 +78,17 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login onLogin={handleLogin} />} />
         <Route path="/" element={teacher ? <Dashboard teacher={teacher} /> : <Navigate to="/login" />} />
+        <Route path="/calendar" element={teacher ? <CalendarPage /> : <Navigate to="/login" />} />
         <Route path="/students" element={teacher ? <StudentList /> : <Navigate to="/login" />} />
         <Route path="/students/new" element={teacher ? <StudentForm /> : <Navigate to="/login" />} />
         <Route path="/students/:id" element={teacher ? <StudentDetail /> : <Navigate to="/login" />} />
         <Route path="/students/:id/edit" element={teacher ? <StudentForm /> : <Navigate to="/login" />} />
-        <Route path="/books" element={teacher ? <BookTracker /> : <Navigate to="/login" />} />
+        <Route path="/books" element={teacher ? <Navigate to="/students" replace /> : <Navigate to="/login" />} />
         <Route path="/exams" element={teacher ? <ExamList /> : <Navigate to="/login" />} />
         <Route path="/exams/new" element={teacher ? <ExamForm /> : <Navigate to="/login" />} />
         <Route path="/exams/analysis/:studentId?" element={teacher ? <ErrorAnalysis /> : <Navigate to="/login" />} />
         <Route path="/finance" element={teacher ? <Finance /> : <Navigate to="/login" />} />
-        <Route path="/curriculum" element={teacher ? <Curriculum /> : <Navigate to="/login" />} />
+        <Route path="/settings" element={teacher ? <Settings /> : <Navigate to="/login" />} />
       </Routes>
 
       {teacher && !isLoginPage && <BottomNav onLogout={handleLogout} />}

@@ -1,0 +1,1311 @@
+[
+  {
+    "week": 1,
+    "theme": "Geometrik Şekiller",
+    "topic": "Temel Geometrik Çizimler ve İnşalar",
+    "learningOutcomes": [
+      "Temel geometrik çizimler için matematiksel araç ve teknolojiden yararlanabilme",
+      "Nokta, doğru, doğru parçası, ışın, açı, çember ve dikme çiziminde gerekli olan araç ve teknolojileri tanır",
+      "Nokta, doğru, doğru parçası, ışın, açı, çember ve dikmeyi oluşturmak için gerekli olan araç ve teknolojileri belirler",
+      "Nokta, doğru, doğru parçası, ışın, açı, çember ve dikmeyi oluşturmak için araç ve teknolojileri kullanır"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Geometrik çizim",
+      "Araç kullanımı",
+      "Teknoloji kullanımı"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 2,
+    "theme": "Geometrik Şekiller",
+    "topic": "Temel Geometrik Çizimler ve İnşalar",
+    "learningOutcomes": [
+      "Temel geometrik çizimlere dayalı deneyimlerini yansıtabilme",
+      "Temel geometrik çizimlere dayalı deneyimlerini gözden geçirir",
+      "Temel geometrik çizimlerin özelliklerine yönelik çıkarım yapar",
+      "Temel geometrik çizimlere dayalı ulaştığı çıkarımların geometrik şekillerin inşasındaki rolünü değerlendirir"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Deneyim yansıtma",
+      "Çıkarım yapma",
+      "Değerlendirme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Gaziler Günü",
+      "İlköğretim Haftası"
+    ]
+  },
+  {
+    "week": 3,
+    "theme": "Geometrik Şekiller",
+    "topic": "Açı Ölçme",
+    "learningOutcomes": [
+      "Açıları ölçmek için matematiksel araç ve teknolojiden yararlanabilme",
+      "Açı ölçmek için gerekli araç ve teknolojiyi tanır",
+      "Açı ölçmek için uygun araç ve teknolojiyi belirler",
+      "Açı ölçmek için uygun araç ve teknolojiyi kullanır"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Açı ölçme",
+      "Araç seçimi",
+      "Ölçme teknikleri"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Dünya Okul Sütü Günü"
+    ]
+  },
+  {
+    "week": 4,
+    "theme": "Geometrik Şekiller",
+    "topic": "Açı Ölçme",
+    "learningOutcomes": [
+      "Düzlemde iki veya üç doğrunun birbirine göre durumuna bağlı olarak oluşabilecek açılara dair çıkarım yapabilme",
+      "Düzlemde iki veya üç doğrunun birbirine göre durumuna bağlı olarak oluşabilecek açılara dair varsayımlarda bulunur",
+      "Düzlemde iki veya üç doğrunun birbirine göre durumuna bağlı olarak oluşan açıları belirleyerek listeler",
+      "Belirlediği açıları varsayımlarıyla karşılaştırır",
+      "Düzlemde iki veya üç doğrunun birbirine göre durumuna bağlı olarak oluşan açılara dair önerme sunar",
+      "Sunduğu önermelerin, doğruların oluşturduğu açıların incelenmesine yönelik katkısına dair gerekçe sunar"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Varsayım oluşturma",
+      "Açı analizi",
+      "Muhakeme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Hayvanları Koruma Günü"
+    ]
+  },
+  {
+    "week": 5,
+    "theme": "Geometrik Şekiller",
+    "topic": "Çokgenler ve Çember",
+    "learningOutcomes": [
+      "Çokgenleri düzlemde ardışık olarak kesişen doğruların oluşturduğu kapalı şekiller olarak yorumlayabilme",
+      "Düzlemde en az üç doğrunun -son doğru ilk doğruyla kesişecek biçimde- ardışık kesişerek oluşturdukları durumları inceler",
+      "Düzlemde en az üç doğrunun - son doğru ilk doğruyla kesişecek biçimde - ardışık kesişimleri ile çeşitli çokgenler oluşturur",
+      "Çokgenlerin düzlemde en az üç doğrunun -son doğru ilk doğruyla kesişecek biçimde- ardışık kesişimleri ile meydana geldiğini ifade eder"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Çokgen tanıma",
+      "Şekil oluşturma",
+      "Geometrik analiz"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Ahilik Kültürü Haftası",
+      "Dünya Afet Azaltma Günü"
+    ]
+  },
+  {
+    "week": 6,
+    "theme": "Geometrik Şekiller",
+    "topic": "Çokgenler ve Çember",
+    "learningOutcomes": [
+      "Çokgenlerin özellikleri ile ilgili edindiği deneyimleri yansıtabilme",
+      "Çokgenlerin özellikleri ile ilgili edindiği deneyimleri gözden geçirir",
+      "Çokgenlerin kenar sayıları, kenar uzunlukları ve açıları üzerinden isimlendirilmesine dair çıkarım yapar",
+      "Çokgenlerin isimlerinin kenar sayısı ve açı özellikleriyle ilgili sağladığı bilgilere ilişkin değerlendirmede bulunur"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Çokgen sınıflandırma",
+      "İsimlendirme",
+      "Özellik analizi"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 7,
+    "theme": "Geometrik Şekiller",
+    "topic": "Çokgenler ve Çember",
+    "learningOutcomes": [
+      "Matematiksel araç ve teknoloji yardımıyla düzlemde iki noktada kesişen çember çiftinin merkezleri ve kesişim noktalarından biri ile inşa edilen üçgenlerin kenar özelliklerine yönelik muhakeme yapabilme",
+      "İki noktada kesişen çember çiftinin merkezleri ve kesişim noktalarından biri ile inşa edilebilecek üçgenlere yönelik varsayımlarda bulunur",
+      "Örnek çizimler üzerinden, kesişen iki çemberin merkezleri ve kesişim noktalarından biri ile inşa edilebilen üçgenleri belirler"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Çember özellikleri",
+      "Üçgen inşası",
+      "Geometrik muhakeme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Birleşmiş Milletler Günü"
+    ]
+  },
+  {
+    "week": 8,
+    "theme": "Geometrik Şekiller",
+    "topic": "Çokgenler ve Çember",
+    "learningOutcomes": [
+      "Matematiksel araç ve teknoloji yardımıyla düzlemde iki noktada kesişen çember çiftinin merkezleri ve kesişim noktalarından biri ile inşa edilen üçgenlerin kenar özelliklerine yönelik muhakeme yapabilme",
+      "Belirlediği üçgenlerin özelliklerini varsayımları ile karşılaştırır",
+      "Çemberin özelliklerini kullanarak önermelerini doğrulamaya yönelik matematiksel gerekçeler sunar"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "Öz Düzenleme/Kendini Düzenleme",
+      "Öz Yansıtma/Kendine Uyarlama",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Çember kesişimi",
+      "Üçgen özellikleri",
+      "Karşılaştırma"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Estetik"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Gözlem formu",
+      "Çalışma kağıdı",
+      "Kontrol listesi",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme formları",
+      "Öğrenme günlüğü",
+      "Zihin haritası"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Cumhuriyet Bayramı",
+      "Kızılay Haftası"
+    ]
+  },
+  {
+    "week": 9,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Çok Basamaklı Sayıları Okuma ve Yazma",
+    "learningOutcomes": [
+      "Altı basamaklı sayıları okuma ve yazmayı çok basamaklı sayılara genelleyebilme",
+      "Günlük yaşamdaki farklı bağlamlardan yola çıkarak altıdan çok basamaklı sayılar hakkında bilgi toplar",
+      "Sayıların bölükleri ile okunuşları arasındaki ortak özellikleri belirler",
+      "Sayıların bölükleri ile okunuşları arasındaki örüntüler üzerinden basamak sayısı altıdan çok olan sayıların okunuş ve yazılışları hakkında önermelerde bulunur"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Sayı okuma",
+      "Sayı yazma",
+      "Basamak değeri"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Sorumluluk",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı",
+      "Dijital Okuryazarlık",
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Atatürk Haftası",
+      "Organ Bağışı Haftası",
+      "Lösemili Çocuklar Haftası"
+    ]
+  },
+  {
+    "week": 10,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Çözümleme",
+    "learningOutcomes": [
+      "Altı basamaklı sayıları okuma ve yazmayı çok basamaklı sayılara genelleyebilme",
+      "Sayıların bölükleri ile okunuşları arasındaki örüntüler üzerinden basamak sayısı altıdan çok olan sayıların okunuş ve yazılışları hakkında önermelerde bulunur"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Çözümleme",
+      "Basamak değeri",
+      "Sayı gösterimi"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Sorumluluk",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı",
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Öğretmenler Günü",
+      "Ağız ve Diş Sağlığı Haftası"
+    ]
+  },
+  {
+    "week": 11,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Doğal Sayılarla Dört İşlem İçeren Problem Çözme",
+    "learningOutcomes": [
+      "Doğal sayılar ve işlemler içeren gerçek yaşam problemlerini çözebilme",
+      "Problemin içerdiği sayı ve işlem bileşenlerini belirler",
+      "Problem bağlamıyla ilişkili verilenleri uygun matematiksel temsillere dönüştürür",
+      "Problemin sonucuna ilişkin tahminde bulunur ve işlemleri gerçekleştirmek için stratejiler geliştirir"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Dört işlem",
+      "Strateji geliştirme"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Sorumluluk",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 12,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Doğal Sayılarla Dört İşlem İçeren Problem Çözme",
+    "learningOutcomes": [
+      "Doğal sayılar ve işlemler içeren gerçek yaşam problemlerini çözebilme",
+      "Belirlenen strateji veya stratejileri çözüm için uygular",
+      "Çözüm yollarını kontrol eder ve çözüme ulaştırmayan stratejiyi değiştirir",
+      "Kullandığı strateji veya stratejileri farklı problemlerin çözümlerine geneller"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Matematiksel modelleme",
+      "Akıl yürütme"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Sorumluluk"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Dünya Engelliler Günü"
+    ]
+  },
+  {
+    "week": 13,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Doğal Sayılarla Dört İşlem İçeren Problem Çözme",
+    "learningOutcomes": [
+      "Doğal sayılar ve işlemler içeren gerçek yaşam problemlerini çözebilme",
+      "Problemin çözümü için kullandığı veya geliştirdiği stratejileri gözden geçirerek kısa yolları değerlendirir",
+      "Genellemenin geçerliliğini matematiksel örneklerle değerlendirir"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Çözüm stratejileri",
+      "Kontrol ve değerlendirme",
+      "Problem çözme"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Sorumluluk"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "İnsan Hakları ve Demokrasi Haftası"
+    ]
+  },
+  {
+    "week": 14,
+    "theme": "Sayılar ve Nicelikler & Geometrik Nicelikler",
+    "topic": "Doğal Sayılarla Dört İşlem & Dikdörtgenin Çevre Uzunluğu",
+    "learningOutcomes": [
+      "Doğal sayılar ve işlemler içeren gerçek yaşam problemlerini çözebilme",
+      "Kenar uzunlukları doğal sayı olan bir dikdörtgenin çevre uzunluğu verildiğinde kenar uzunluklarını yorumlayabilme",
+      "Verilen çevre uzunluğuna sahip ve kenar uzunlukları doğal sayı olan dikdörtgen oluşturur"
+    ],
+    "processComponents": [
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Çevre hesaplama",
+      "Dikdörtgen özellikleri"
+    ],
+    "values": [
+      "Çalışkanlık",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Açık uçlu sorulardan oluşan çalışma kağıdı",
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 15,
+    "theme": "Geometrik Nicelikler",
+    "topic": "Dikdörtgenin Çevre Uzunluğu ve Alanı",
+    "learningOutcomes": [
+      "Birim karelerden yola çıkarak bir şeklin alanını değerlendirebilme",
+      "Bir şeklin alanını ölçmede, seçtiği birim kareleri ölçüt olarak belirler",
+      "Bir şeklin alanını seçilen birim karelerle ölçer",
+      "Bir şeklin alanını birim kare sayısı ile ilişkilendirerek dikdörtgenin alan bağıntısına ilişkin yargıda bulunur"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği",
+      "Esneklik"
+    ],
+    "learningSkills": [
+      "Alan ölçme",
+      "Birim kare",
+      "Alan bağıntısı"
+    ],
+    "values": [
+      "Estetik",
+      "Saygı"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Açık uçlu sorular",
+      "Çalışma kağıdı",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Mehmet Akif Ersoy'u Anma Haftası"
+    ]
+  },
+  {
+    "week": 16,
+    "theme": "Geometrik Nicelikler",
+    "topic": "Dikdörtgenin Çevre Uzunluğu ve Alanı",
+    "learningOutcomes": [
+      "Kenar uzunlukları doğal sayı olan bir dikdörtgenin alanının ölçüsü verildiğinde çevre uzunluğunu yorumlayabilme",
+      "Aynı alana sahip farklı dikdörtgenlerin çevre uzunluklarını belirler",
+      "Aynı çevre uzunluğuna sahip dikdörtgenlerin farklı alanlara sahip olabileceğini ifade eder"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Alan-çevre ilişkisi",
+      "Karşılaştırma",
+      "Yorumlama"
+    ],
+    "values": [
+      "Estetik",
+      "Saygı"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Açık uçlu sorular",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Sınav Haftası"
+    ]
+  },
+  {
+    "week": 17,
+    "theme": "Geometrik Nicelikler",
+    "topic": "Dikdörtgenin Çevre Uzunluğu ve Alanı",
+    "learningOutcomes": [
+      "Dikdörtgenin çevre uzunluğu ve alanı ile ilgili problemleri çözebilme",
+      "Problem bağlamındaki temsilleri farklı temsillere dönüştürür",
+      "Problemin sonucuna ilişkin tahminde bulunur ve işlemleri gerçekleştirmek için stratejiler geliştirir",
+      "Kullandığı strateji veya stratejileri farklı problemlerin çözümlerine geneller"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Stratejik düşünme",
+      "Genelleme"
+    ],
+    "values": [
+      "Estetik",
+      "Saygı"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Enerji Tasarrufu Haftası"
+    ]
+  },
+  {
+    "week": 18,
+    "theme": "Geometrik Nicelikler",
+    "topic": "Dikdörtgenin Çevre Uzunluğu ve Alanı",
+    "learningOutcomes": [
+      "Dikdörtgenin çevre uzunluğu ve alanı ile ilgili problemleri çözebilme",
+      "Çözüm yollarını kontrol eder ve çözüme ulaştırmayan stratejiyi değiştirir",
+      "Genellemenin geçerliliğini matematiksel örneklerle değerlendirir"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Alternatif çözüm yolları",
+      "Kontrol etme"
+    ],
+    "values": [
+      "Estetik",
+      "Saygı"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Şubat Tatili"
+    ]
+  },
+  {
+    "week": 19,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Gerçek yaşam durumlarına karşılık gelen kesirleri farklı biçimlerde temsil edebilme",
+      "Kesirlerin farklı gösterimlerinin gerçek yaşam durumu içerisindeki kullanımını anlar",
+      "Gerçek yaşam durumlarında karşılaşılan kesirlerin farklı gösterimlerini ilişkilendirmek için farklı modelleri seçer"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği",
+      "Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Kesir gösterimleri",
+      "Model kullanımı",
+      "Karşılaştırma"
+    ],
+    "values": [
+      "Adalet",
+      "Duyarlılık",
+      "Saygı"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık",
+      "Veri Okuryazarlığı"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Çalışma kağıdı",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 20,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Gerçek yaşam durumlarına karşılık gelen kesirleri farklı biçimlerde temsil edebilme",
+      "Seçilen modelleri kullanır",
+      "Kullanılan modelleri kesirlerin farklı gösterimleri ile yorumlar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Ondalık gösterim",
+      "Yüzde gösterimi",
+      "Dönüştürme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 21,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Gerçek yaşam durumlarına karşılık gelen kesirleri farklı biçimlerde temsil edebilme",
+      "Benzer durumlarda kullanılabilecek farklı modelleri kullanışlılık açısından karşılaştırır",
+      "Karşılaştırdığı modellerin kullanışlılığına ilişkin karar verir"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Kesir modelleri",
+      "Temsil dönüştürme",
+      "Karar verme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 22,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Farklı gösterimlerle ifade edilen kesirlerin karşılaştırılmasına yönelik çıkarım yapabilme",
+      "Farklı gösterimlerle ifade edilen kesirlerin karşılaştırılmasına yönelik varsayımda bulunur",
+      "Varsayımındaki ilişkileri inceleyerek kesirlerin karşılaştırılmasına yönelik genellemeleri belirler"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Kesir karşılaştırma",
+      "Varsayım oluşturma",
+      "Genelleme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Vergi Haftası",
+      "Yeşilay Haftası"
+    ]
+  },
+  {
+    "week": 23,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Farklı gösterimlerle ifade edilen kesirlerin karşılaştırılmasına yönelik çıkarım yapabilme",
+      "Elde ettiği genellemelerin varsayımını karşılayıp karşılamadığını sayı doğrusu üzerinde gösterir",
+      "Varsayımı ile ilgili ulaştığı sonuca yönelik matematiksel önermeleri sözel ya da sembolik temsil ile sunar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Matematiksel ifade",
+      "Sıralama",
+      "Tahmin etme"
+    ],
+    "values": [
+      "Duyarlılık"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Dünya Kadınlar Günü",
+      "Girişimcilik Haftası"
+    ]
+  },
+  {
+    "week": 24,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Farklı gösterimlerle ifade edilen kesirlerin karşılaştırılmasına yönelik çıkarım yapabilme",
+      "Sunduğu önermelerin tahmin etme becerisine katkısını gerekçelerle açıklar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Sayı doğrusu kullanımı",
+      "Görsel temsil",
+      "Akıl yürütme"
+    ],
+    "values": [
+      "Duyarlılık"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Bilim ve Teknoloji Haftası"
+    ]
+  },
+  {
+    "week": 25,
+    "theme": "Sayılar ve Nicelikler",
+    "topic": "Kesirlerin Farklı Gösterimleri",
+    "learningOutcomes": [
+      "Farklı gösterimlerle ifade edilen kesirlerin karşılaştırılmasına yönelik çıkarım yapabilme"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Çıkarım yapma",
+      "Matematiksel iletişim",
+      "Gerekçelendirme"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Tasarruf"
+    ],
+    "literacySkills": [
+      "Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Ara Tatil"
+    ]
+  },
+  {
+    "week": 26,
+    "theme": "İstatistiksel Araştırma Süreci",
+    "topic": "Kategorik Veri Dağılımları",
+    "learningOutcomes": [
+      "Kategorik veri ile çalışabilme ve veriye dayalı karar verebilme",
+      "Kategorik veriye dayanan istatistiksel araştırma gerektiren durumları fark eder",
+      "Kategorik veriye dayanan betimleme veya karşılaştırma gerektirebilecek araştırma soruları oluşturur"
+    ],
+    "processComponents": [
+      "Öz Farkındalık/Kendini Tanıma",
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Veri toplama",
+      "Anket hazırlama",
+      "İstatistiksel araştırma"
+    ],
+    "values": [
+      "Duyarlılık",
+      "Dürüstlük"
+    ],
+    "literacySkills": [
+      "Bilgi Okuryazarlığı",
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Performans görevi",
+      "Gözlem formu"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Kütüphaneler Haftası"
+    ]
+  },
+  {
+    "week": 27,
+    "theme": "İstatistiksel Araştırma Süreci",
+    "topic": "Kategorik Veri Dağılımları",
+    "learningOutcomes": [
+      "Kategorik veri ile çalışabilme ve veriye dayalı karar verebilme",
+      "Veri görselleştirme aracını seçme gerekçelerini belirtir",
+      "Toplanan veriyi uygun görselleştirme aracı ile analiz eder"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Veri görselleştirme",
+      "Grafik oluşturma",
+      "Veri analizi"
+    ],
+    "values": [
+      "Duyarlılık"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık",
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 28,
+    "theme": "İstatistiksel Araştırma Süreci",
+    "topic": "Kategorik Veri Dağılımları",
+    "learningOutcomes": [
+      "Kategorik veri ile çalışabilme ve veriye dayalı karar verebilme",
+      "Araştırma sonuçlarını elde eder",
+      "Araştırmada ulaştığı sonuçlara yönelik gerekçeler sunar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Sonuç çıkarma",
+      "Değerlendirme",
+      "Araştırma süreci"
+    ],
+    "values": [
+      "Duyarlılık"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Turizm Haftası"
+    ]
+  },
+  {
+    "week": 29,
+    "theme": "İstatistiksel Araştırma Süreci",
+    "topic": "Kategorik Veri Dağılımları",
+    "learningOutcomes": [
+      "Başkaları tarafından oluşturulan kategorik veriye dayalı istatistiksel sonuç veya yorumları tartışabilme",
+      "Başkaları tarafından oluşturulan kategorik veriye dayalı istatistiksel sonuç veya yorumlara yönelik hataları ya da yanlılıkları tespit eder"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Eleştirel düşünme",
+      "Veri yorumlama",
+      "İstatistiksel akıl yürütme"
+    ],
+    "values": [
+      "Duyarlılık"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"
+    ]
+  },
+  {
+    "week": 30,
+    "theme": "İşlemlerle Cebirsel Düşünme",
+    "topic": "Eşitliğin Korunumu",
+    "learningOutcomes": [
+      "Eşitliğin korunumuna ve işlem özelliklerine yönelik çıkarım yapabilme",
+      "Doğal sayılarla toplama ve çarpma işlemlerinin değişme, birleşme özellikleri hakkında varsayımlarda bulunur",
+      "Çarpmanın toplama ve çıkarma işlemleri üzerine dağılma özelliklerine yönelik varsayımlarda bulunur"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Eşitlik korunumu",
+      "İşlem özellikleri"
+    ],
+    "values": [
+      "Çalışkanlık"
+    ],
+    "literacySkills": [
+      "Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Bilişim Haftası"
+    ]
+  },
+  {
+    "week": 31,
+    "theme": "İşlemlerle Cebirsel Düşünme",
+    "topic": "Değişme, Birleşme ve Dağılma Özellikleri",
+    "learningOutcomes": [
+      "Eşitliğin korunumuna ve işlem özelliklerine yönelik çıkarım yapabilme",
+      "İncelediği örnekler üzerinden varsayımına yönelik genellemeleri belirler",
+      "Varsayımı ile ilgili ulaştığı sonuca yönelik doğrulayabileceği matematiksel bir önermeyi sunar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Değişme özelliği",
+      "Birleşme özelliği",
+      "Dağılma özelliği"
+    ],
+    "values": [
+      "Çalışkanlık"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Anneler Günü"
+    ]
+  },
+  {
+    "week": 32,
+    "theme": "İşlemlerle Cebirsel Düşünme",
+    "topic": "İşlem Önceliği & Örüntüler",
+    "learningOutcomes": [
+      "Karşılaştığı günlük hayat ya da matematiksel durumlarda işlem önceliğini yorumlayabilme",
+      "Sayı ve şekil örüntülerinin kuralına ilişkin muhakeme yapabilme",
+      "Örüntülerdeki ilişkilere yönelik varsayımda bulunur"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "İşlem önceliği",
+      "Örüntü tanıma",
+      "Kural bulma"
+    ],
+    "values": [
+      "Çalışkanlık"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Engelliler Haftası"
+    ]
+  },
+  {
+    "week": 33,
+    "theme": "İşlemlerle Cebirsel Düşünme",
+    "topic": "Örüntüler",
+    "learningOutcomes": [
+      "Sayı ve şekil örüntülerinin kuralına ilişkin muhakeme yapabilme",
+      "Varsayıma yönelik örüntüdeki terimleri inceleyerek örüntünün kuralına ilişkin genellemeleri belirler",
+      "Sunduğu önermenin geçerliliğini destekleyen kapsayıcı örnekler verir"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Şekil örüntüleri",
+      "Örüntü genelleme",
+      "Matematiksel düşünme"
+    ],
+    "values": [
+      "Çalışkanlık"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Atatürk'ü Anma ve Gençlik ve Spor Bayramı"
+    ]
+  },
+  {
+    "week": 34,
+    "theme": "İşlemlerle Cebirsel Düşünme & Veriden Olasılığa",
+    "topic": "Temel Aritmetik İşlemler ve Algoritma & Öznel Olasılık",
+    "learningOutcomes": [
+      "Temel aritmetik işlem içeren durumlardaki algoritmaları yorumlayabilme",
+      "Herhangi bir olayın olasılığının 0 ile 1 arasında olduğunu anlayabilme",
+      "Bir olayın olasılığına dair tahminlerini farklı sayı temsillerine dönüştürür"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Algoritma",
+      "Olasılık kavramı",
+      "Tahmin etme"
+    ],
+    "values": [
+      "Çalışkanlık"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "İstanbul'un Fethi"
+    ]
+  },
+  {
+    "week": 35,
+    "theme": "Veriden Olasılığa",
+    "topic": "Öznel Olasılık",
+    "learningOutcomes": [
+      "Herhangi bir olayın olasılığının 0 ile 1 arasında olduğunu anlayabilme",
+      "Olayları ve olası durumları inceler",
+      "Kendi ifadeleriyle tahminde bulunduğu bir olayın olasılığının 0 ile 1 arasında olduğunu ifade eder"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Olasılık yorumlama",
+      "Olay analizi",
+      "Sayısal temsil"
+    ],
+    "values": [
+      "Adalet"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 36,
+    "theme": "Veriden Olasılığa",
+    "topic": "Öznel Olasılık",
+    "learningOutcomes": [
+      "Olayları az ya da çok olasılıklı şeklinde yapılandırabilme",
+      "Olayların olasılıklarına ilişkin nedensel veya mantıksal ilişkiler ortaya koyar",
+      "Kendi öz bilgisi ile elde ettiği ilişkilere dayanarak olayların olasılıklarını az veya çok olasılıklı şeklinde ortaya koyar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Olasılık karşılaştırma",
+      "Mantıksal düşünme",
+      "Sınıflandırma"
+    ],
+    "values": [
+      "Adalet"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Çevre ve İklim Değişikliği Haftası"
+    ]
+  },
+  {
+    "week": 37,
+    "theme": "Veriden Olasılığa",
+    "topic": "Öznel Olasılık",
+    "learningOutcomes": [
+      "Olayları az ya da çok olasılıklı şeklinde yapılandırabilme",
+      "Olayların olasılıklarına ilişkin nedensel veya mantıksal ilişkiler ortaya koyar",
+      "Kendi öz bilgisi ile elde ettiği ilişkilere dayanarak olayların olasılıklarını az veya çok olasılıklı şeklinde ortaya koyar"
+    ],
+    "processComponents": [
+      "İletişim",
+      "İş Birliği"
+    ],
+    "learningSkills": [
+      "Olasılık değerlendirme",
+      "Karar verme",
+      "Öz bilgi"
+    ],
+    "values": [
+      "Adalet"
+    ],
+    "literacySkills": [
+      "Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testi",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Babalar Günü"
+    ]
+  }
+]

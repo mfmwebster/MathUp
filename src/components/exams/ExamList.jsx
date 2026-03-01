@@ -8,6 +8,7 @@ const ExamList = () => {
   const [exams, setExams] = useState([]);
   const [students, setStudents] = useState([]);
   const [filter, setFilter] = useState('all'); // all, student, subject
+  const [sortBy, setSortBy] = useState('date'); // date, name, net, success
   const { getExams, getStudents } = useDatabase();
   const navigate = useNavigate();
 
@@ -21,9 +22,31 @@ const ExamList = () => {
       getStudents()
     ]);
     
-    // Tarihe gore sirala (yeni ustte)
-    setExams(examsData.sort((a, b) => new Date(b.date) - new Date(a.date)));
+    setExams(examsData);
     setStudents(studentsData);
+  };
+
+  const getSortedExams = () => {
+    const filtered = exams.filter(e => filter === 'all' || e.studentId === filter);
+    
+    const sorted = [...filtered].sort((a, b) => {
+      switch(sortBy) {
+        case 'date':
+          return new Date(b.date) - new Date(a.date); // Yeni üstte
+        case 'name':
+          return (a.name || '').localeCompare(b.name || '', 'tr');
+        case 'net':
+          return parseFloat(b.net) - parseFloat(a.net); // Yüksek net üstte
+        case 'success':
+          const successA = (parseFloat(a.net) / 20) * 100;
+          const successB = (parseFloat(b.net) / 20) * 100;
+          return successB - successA; // Yüksek başarı üstte
+        default:
+          return 0;
+      }
+    });
+    
+    return sorted;
   };
 
   const getStudentName = (id) => {
@@ -33,26 +56,14 @@ const ExamList = () => {
 
   const getSubjectLabel = (subject) => {
     const labels = {
-      turkce: 'Türkçe',
-      matematik: 'Matematik',
-      fen: 'Fen',
-      sosyal: 'Sosyal',
-      ingilizce: 'İngilizce',
-      din: 'Din',
-      inkilap: 'İnkılap'
+      matematik: 'Matematik'
     };
     return labels[subject] || subject;
   };
 
   const getSubjectColor = (subject) => {
     const colors = {
-      matematik: 'bg-blue-100 text-blue-800',
-      turkce: 'bg-red-100 text-red-800',
-      fen: 'bg-green-100 text-green-800',
-      sosyal: 'bg-amber-100 text-amber-800',
-      ingilizce: 'bg-purple-100 text-purple-800',
-      din: 'bg-teal-100 text-teal-800',
-      inkilap: 'bg-orange-100 text-orange-800'
+      matematik: 'bg-blue-100 text-blue-800'
     };
     return colors[subject] || 'bg-gray-100 text-gray-800';
   };
@@ -70,23 +81,39 @@ const ExamList = () => {
         </button>
       </div>
 
-      {/* Filtreler */}
-      <div className="flex gap-2 mb-4 overflow-x-auto hide-scrollbar">
-        <button
-          onClick={() => setFilter('all')}
-          className="px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap"
-        >
-          Tümü
-        </button>
-        {students.map(s => (
+      {/* Filtreler ve Siralama */}
+      <div className="mb-4 space-y-3">
+        <div className="flex gap-2 overflow-x-auto hide-scrollbar">
           <button
-            key={s.id}
-            onClick={() => setFilter(s.id)}
-            className="px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap"
+            onClick={() => setFilter('all')}
+            className={'px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ' + (filter === 'all' ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700')}
           >
-            {s.fullName.split(' ')[0]}
+            Tümü
           </button>
-        ))}
+          {students.map(s => (
+            <button
+              key={s.id}
+              onClick={() => setFilter(s.id)}
+              className={'px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap ' + (filter === s.id ? 'bg-primary-600 text-white' : 'bg-gray-100 text-gray-700')}
+            >
+              {s.fullName.split(' ')[0]}
+            </button>
+          ))}
+        </div>
+        
+        <div className="flex items-center gap-2">
+          <Filter className="w-4 h-4 text-gray-600" />
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="input-field text-sm py-2"
+          >
+            <option value="date">Tarihe göre (Yeni)</option>
+            <option value="name">Adına göre</option>
+            <option value="net">Net Sayısına göre</option>
+            <option value="success">Başarısına göre</option>
+          </select>
+        </div>
       </div>
 
       {/* Liste */}
@@ -97,9 +124,7 @@ const ExamList = () => {
             <p>Henüz deneme eklenmemiş</p>
           </div>
         ) : (
-          exams
-            .filter(e => filter === 'all' || e.studentId === filter)
-            .map((exam) => (
+          getSortedExams().map((exam) => (
               <div 
                 key={exam.id} 
                 onClick={() => navigate(`/students/${exam.studentId}`)}
@@ -125,6 +150,9 @@ const ExamList = () => {
                     <p className="font-medium text-gray-900">
                       {getStudentName(exam.studentId)}
                     </p>
+                    {exam.name && (
+                      <p className="text-xs text-primary-600 font-medium">{exam.name}</p>
+                    )}
                     <p className="text-sm text-gray-500">
                       {exam.correct}D / {exam.wrong}Y / {exam.empty}B
                     </p>

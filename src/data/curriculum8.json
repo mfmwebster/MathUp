@@ -1,0 +1,577 @@
+[
+  {
+    "week": 1,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Çarpanlar ve Katlar",
+    "learningOutcomes": [
+      "M.8.1.1.1. Verilen pozitif tam sayıların çarpanlarını bulur",
+      "M.8.1.1.2. İki doğal sayının EBOB ve EKOK'unu hesaplar",
+      "Pozitif tam sayıların asal çarpanlarını bulma, EBOB-EKOK hesaplama"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 2,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Çarpanlar ve Katlar",
+    "learningOutcomes": [
+      "M.8.1.1.2. EBOB-EKOK problemlerini çözer",
+      "M.8.1.1.3. İki doğal sayının aralarında asal olup olmadığını belirler",
+      "Aralarında asal sayılar, yardımlaşma değerleri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 3,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Üslü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.2.1. Tam sayıların tam sayı kuvvetlerini hesaplar",
+      "M.8.1.2.2. Üslü ifadelerle ilgili temel kuralları anlar",
+      "Üslü sayılar, çarpma kuralları"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 4,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Üslü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.2.3. Sayıların ondalık gösterimlerini çözümler",
+      "M.8.1.2.4. Verilen sayıyı 10'un kuvvetleriyle ifade eder",
+      "Ondalık gösterim, bilimsel gösterime giriş"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 5,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Üslü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.2.5. Çok büyük ve çok küçük sayıları bilimsel gösterimle ifade eder",
+      "Bilimsel gösterim, bilimsellik değeri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 6,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Kareköklü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.3.1. Tam kare pozitif sayılarla karekökleri arasındaki ilişkiyi belirler",
+      "M.8.1.3.2. Tam kare olmayan karekökü sayının hangi iki doğal sayı arasında olduğunu belirler",
+      "Karekök kavramı, tam kare sayılar"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 7,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Kareköklü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.3.3. Karekökü ifadeyi a√b şeklinde yazar",
+      "M.8.1.3.4. Karekökü ifadelerde çarpma ve bölme işlemleri yapar",
+      "Karekökü ifadelerde işlemler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 8,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Kareköklü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.3.5. Karekökü ifadelerde toplama ve çıkarma işlemleri yapar",
+      "Benzer karekökü ifadeler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 9,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Kareköklü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.3.6. Karekökü ifadeyle çarpıldığında sonucu doğal sayı yapan çarpanlara örnek verir",
+      "M.8.1.3.7. Ondalık ifadelerin kareköklerini belirler",
+      "Rasyonelleştirme, ondalık karekökler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 10,
+    "theme": "Sayılar ve İşlemler",
+    "topic": "Kareköklü İfadeler",
+    "learningOutcomes": [
+      "M.8.1.3.8. Gerçek sayıları tanır, rasyonel ve irrasyonel sayılarla ilişkilendirir",
+      "İrrasyonel sayılar, pi sayısı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 11,
+    "theme": "Veri İşleme",
+    "topic": "Veri Analizi",
+    "learningOutcomes": [
+      "M.8.4.1.1. En fazla üç veri grubuna ait çizgi ve sütun grafiklerini yorumlar",
+      "Grafik okuma, yorumlama"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 12,
+    "theme": "Veri İşleme",
+    "topic": "Veri Analizi",
+    "learningOutcomes": [
+      "M.8.4.1.2. Verileri sütun, daire veya çizgi grafiği ile gösterir",
+      "Grafik çizme, dönüşümler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 13,
+    "theme": "Olasılık",
+    "topic": "Basit Olayların Olma Olasılığı",
+    "learningOutcomes": [
+      "M.8.5.1.1. Bir olaya ait olası durumları belirler",
+      "M.8.5.1.2. Daha fazla, eşit, daha az olasılıklı olayları ayırt eder",
+      "Olasılık kavramı, olası durumlar"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 14,
+    "theme": "Olasılık",
+    "topic": "Basit Olayların Olma Olasılığı",
+    "learningOutcomes": [
+      "M.8.5.1.3. Eşit şansa sahip olaylarda her bir çıktının olasılık değerinin eşit olduğunu açıklar",
+      "M.8.5.1.4. Olasılık değerinin 0-1 arasında olduğunu anlar",
+      "Eşit olasılık, olasılık değeri aralığı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 15,
+    "theme": "Olasılık",
+    "topic": "Basit Olayların Olma Olasılığı",
+    "learningOutcomes": [
+      "M.8.5.1.5. Basit bir olayın olma olasılığını hesaplar",
+      "Olasılık hesaplama, hoşgörü değeri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 16,
+    "theme": "Cebir",
+    "topic": "Cebirsel İfadeler ve Özdeşlikler",
+    "learningOutcomes": [
+      "M.8.2.1.1. Basit cebirsel ifadeleri anlar ve farklı biçimlerde yazar",
+      "M.8.2.1.2. Cebirsel ifadelerin çarpımını yapar",
+      "Cebirsel ifadeler, terim-katsayı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 17,
+    "theme": "Cebir",
+    "topic": "Cebirsel İfadeler ve Özdeşlikler",
+    "learningOutcomes": [
+      "M.8.2.1.3. Özdeşlikleri modellerle açıklar",
+      "(a±b)²=a²±2ab+b², a²-b²=(a-b)(a+b)"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 18,
+    "theme": "Cebir",
+    "topic": "Cebirsel İfadeler ve Özdeşlikler",
+    "learningOutcomes": [
+      "M.8.2.1.4. Cebirsel ifadeleri çarpanlara ayırır",
+      "Ortak çarpan parantezine alma, iki kare farkı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 19,
+    "theme": "Cebir",
+    "topic": "Doğrusal Denklemler",
+    "learningOutcomes": [
+      "M.8.2.2.1. Birinci dereceden bir bilinmeyenli denklemleri çözer",
+      "Denklem çözme, rasyonel katsayılar"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 20,
+    "theme": "Cebir",
+    "topic": "Doğrusal Denklemler",
+    "learningOutcomes": [
+      "M.8.2.2.2. Koordinat sistemini özellikleriyle tanır",
+      "M.8.2.2.3. Doğrusal ilişkiyi tablo ve denklem ile ifade eder",
+      "Koordinat düzlemi, doğrusal ilişki"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 21,
+    "theme": "Cebir",
+    "topic": "Doğrusal Denklemler",
+    "learningOutcomes": [
+      "M.8.2.2.4. Doğrusal denklemlerin grafiğini çizer",
+      "M.8.2.2.5. Doğrusal ilişki içeren gerçek hayat durumlarını yorumlar",
+      "Doğru grafiği, eksenlerde kesim noktaları"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 22,
+    "theme": "Cebir",
+    "topic": "Doğrusal Denklemler",
+    "learningOutcomes": [
+      "M.8.2.2.6. Doğrunun eğimini modellerle açıklar",
+      "Eğim kavramı, iyilik değeri (engelli rampaları)"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 23,
+    "theme": "Cebir",
+    "topic": "Eşitsizlikler",
+    "learningOutcomes": [
+      "M.8.2.3.1. Birinci dereceden eşitsizlik içeren durumlara uygun matematik cümleleri yazar",
+      "M.8.2.3.2. Eşitsizlikleri sayı doğrusunda gösterir",
+      "Eşitsizlik kavramı, sayı doğrusu gösterimi"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 24,
+    "theme": "Cebir",
+    "topic": "Eşitsizlikler",
+    "learningOutcomes": [
+      "M.8.2.3.3. Birinci dereceden eşitsizlikleri çözer",
+      "Eşitsizlik çözme, yön değiştirme, adalet değeri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 25,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Üçgenler",
+    "learningOutcomes": [
+      "M.8.3.1.1. Üçgende kenarortay, açıortay ve yüksekliği inşa eder",
+      "Üçgen elemanları, özel üçgenlerde özellikler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 26,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Üçgenler",
+    "learningOutcomes": [
+      "M.8.3.1.2. Üçgenin iki kenar toplamı/farkı ile üçüncü kenarı ilişkilendirir",
+      "M.8.3.1.3. Kenar uzunlukları ile karşı açı ölçülerini ilişkilendirir",
+      "Üçgen eşitsizliği, büyük kenar-büyük açı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 27,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Üçgenler",
+    "learningOutcomes": [
+      "M.8.3.1.4. Yeterli elemanı verilen üçgeni çizer",
+      "M.8.3.1.5. Pisagor bağıntısını oluşturur",
+      "Üçgen çizimi, Pisagor teoremi, saygı değeri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 28,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Eşlik ve Benzerlik",
+    "learningOutcomes": [
+      "M.8.3.3.1. Eşlik ve benzerliği ilişkilendirir",
+      "M.8.3.3.2. Benzer çokgenlerin benzerlik oranını belirler",
+      "Eş ve benzer şekiller, benzerlik oranı"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 29,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Dönüşüm Geometrisi",
+    "learningOutcomes": [
+      "M.8.3.2.1. Öteleme sonucundaki görüntüleri çizer",
+      "M.8.3.2.2. Yansıma sonucu oluşan görüntüyü oluşturur",
+      "Öteleme, yansıma, simetri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 30,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Dönüşüm Geometrisi",
+    "learningOutcomes": [
+      "M.8.3.2.3. Çokgenlerin öteleme ve yansıma sonucu ortaya çıkan görüntüsünü oluşturur",
+      "Ardışık dönüşümler, geleneksel sanatlar"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 31,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Geometrik Cisimler",
+    "learningOutcomes": [
+      "M.8.3.4.1. Dik prizmaları tanır ve temel özelliklerini belirler",
+      "M.8.3.4.2. Dik dairesel silindirin temel elemanlarını belirler",
+      "Prizma, silindir, açınım"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 32,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Geometrik Cisimler",
+    "learningOutcomes": [
+      "M.8.3.4.3. Dik dairesel silindirin yüzey alanı bağıntısını oluşturur",
+      "M.8.3.4.4. Dik dairesel silindirin hacim bağıntısını oluşturur",
+      "Silindir alanı ve hacim"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 33,
+    "theme": "Geometri ve Ölçme",
+    "topic": "Geometrik Cisimler",
+    "learningOutcomes": [
+      "M.8.3.4.5. Dik piramidi tanır ve temel elemanlarını belirler",
+      "M.8.3.4.6. Dik koniyi tanır ve temel elemanlarını belirler",
+      "Piramit, koni, sorumluluk değeri"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 34,
+    "theme": "Genel Tekrar",
+    "topic": "Tekrar ve Pekiştirme",
+    "learningOutcomes": [
+      "Sayılar ve işlemler tekrarı",
+      "EBOB-EKOK, üslü-karekökü ifadeler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 35,
+    "theme": "Genel Tekrar",
+    "topic": "Tekrar ve Pekiştirme",
+    "learningOutcomes": [
+      "Cebir tekrarı",
+      "Cebirsel ifadeler, denklemler, eşitsizlikler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 36,
+    "theme": "Genel Tekrar",
+    "topic": "Tekrar ve Pekiştirme",
+    "learningOutcomes": [
+      "Geometri tekrarı",
+      "Üçgenler, benzerlik, dönüşümler, cisimler"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 37,
+    "theme": "Sınav Hazırlık",
+    "topic": "LGS Hazırlık",
+    "learningOutcomes": [
+      "LGS deneme ve değerlendirme",
+      "26 Haziran LGS'ye yönelik son çalışmalar"
+    ],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  }
+]

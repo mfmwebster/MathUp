@@ -88,7 +88,7 @@ export const getWeeksUntilLGS = () => {
 };
 
 // Ders planı oluştur (haftalık dersler)
-export const generateLessonSchedule = (startDate, dayOfWeek, time, duration, weeks) => {
+export const generateLessonSchedule = (startDate, dayOfWeek, time, duration, weeks, unitFee = 0) => {
   const schedule = [];
   const start = new Date(startDate);
   
@@ -106,9 +106,24 @@ export const generateLessonSchedule = (startDate, dayOfWeek, time, duration, wee
       time: time,
       duration: duration,
       completed: false,
-      topic: null
+      topic: null,
+      paymentAmount: parseFloat(unitFee) || 0,
+      paymentStatus: 'pending',
+      paymentCollectedAt: null
     });
   }
   
   return schedule;
+};
+
+// Kaç hafta ders planlanacağını hesapla
+//  - 8. sınıf için LGS tarihine kadar olan hafta sayısını döner
+//  - diğer sınıflar için sabit müfredat süresi (37 hafta)
+export const getScheduleWeeks = (grade = '') => {
+  const defaultWeeks = 37;
+  if (grade === '8') {
+    // LGS'ye kalan hafta sayısını al ve 37 ile sınırla
+    return Math.min(getWeeksUntilLGS(), defaultWeeks);
+  }
+  return defaultWeeks;
 };

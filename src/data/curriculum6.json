@@ -1,0 +1,1457 @@
+[
+  {
+    "week": 1,
+    "theme": "SAYILAR VE NİCELİKLER (1)",
+    "topic": "Doğal Sayıların Çarpanları ve Katları",
+    "learningOutcomes": [
+      "Karşılaştığı durumlarda bir doğal sayının çarpan ve katlarına yönelik varsayımlarda bulunur",
+      "Varsayımına yönelik örnek durumların içerdiği ilişkileri inceleyerek bir doğal sayının çarpan ve katlarına ilişkin genellemeleri belirler",
+      "Elde ettiği genellemelerin varsayımını karşılayıp karşılamadığını çeşitli modellerle gösterir",
+      "Varsayımı ile ilgili ulaştığı sonuca yönelik doğrulayabileceği matematiksel bir önermeyi sözel ya da sembolik temsil ile sunar",
+      "Farklı problemlerin pratik yoldan çözümüne yönelik oluşturduğu önermenin gerekçelerini sunar",
+      "Önermenin geçerliliğini destekleyen kapsayıcı örnekler verir",
+      "İşe koştuğu doğrulamanın benzer önermelere uygulanıp uygulanamayacağını değerlendirir"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Muhakeme yapma",
+      "Genelleme"
+    ],
+    "values": [
+      "D9. Merhamet",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Tanılayıcı dallanmış ağaç",
+      "Öz değerlendirme",
+      "Akran değerlendirme",
+      "Grup değerlendirme",
+      "İzleme testi",
+      "Gelişim raporu",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 2,
+    "theme": "SAYILAR VE NİCELİKLER (1)",
+    "topic": "Doğal Sayıların Çarpanları ve Katları",
+    "learningOutcomes": [
+      "Bir doğal sayının katlarını veya basamak değerlerini dikkate alarak 2, 3, 4, 5, 6, 9 ve 10'a tam bölünebilme kriterleri ile ilgili varsayımlarda bulunur",
+      "2, 3, 4, 5, 6, 9 ve 10'un katlarını ve basamak değerlerini inceleyerek genellemeleri belirler",
+      "Elde ettiği genellemelerin, varsayımını karşılayıp karşılamadığını örnekler ile sınar",
+      "Bir doğal sayının 2, 3, 4, 5, 6, 9 ve 10 ile tam bölünebilmesindeki kriterlere ilişkin önerme sunar",
+      "Bir doğal sayının 2, 3, 4, 5, 6, 9 ve 10 ile tam bölünebilmesindeki kriterlerin farklı durumlarda kullanışlılığını değerlendirir"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Kriter belirtme",
+      "Sınama"
+    ],
+    "values": [
+      "D9. Merhamet",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Tanılayıcı dallanmış ağaç",
+      "Öz değerlendirme",
+      "Akran değerlendirme",
+      "Grup değerlendirme",
+      "İzleme testi",
+      "Gelişim raporu",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Gaziler Günü",
+      "İlköğretim Haftası"
+    ]
+  },
+  {
+    "week": 3,
+    "theme": "SAYILAR VE NİCELİKLER (1)",
+    "topic": "Asal Sayılar ve Ortak Kat-Ortak Bölen",
+    "learningOutcomes": [
+      "Bir doğal sayının asal olup olmadığını ve asal çarpanlarını belirler",
+      "Asal sayıların özelliklerini ve bir doğal sayı ile asal çarpanları arasındaki ilişkileri belirler",
+      "Problemlerde ya da matematiksel durumlarda verilen iki sayının ortak katlarını ve ortak bölenlerini inceler",
+      "İncelediği ortak kat veya ortak bölen ilişkilerini çizim, tablo ve sayı doğrusu gibi matematiksel temsillerle ifade eder",
+      "İki sayının ortak katlarını ve ortak bölenlerini kendi ifadelerini kullanarak açıklar"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Asal çarpanlara ayırma",
+      "Problem yorumlama"
+    ],
+    "values": [
+      "D9. Merhamet",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Tanılayıcı dallanmış ağaç",
+      "Öz değerlendirme",
+      "Akran değerlendirme",
+      "Grup değerlendirme",
+      "İzleme testi",
+      "Gelişim raporu",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Dünya Okul Sütü Günü"
+    ]
+  },
+  {
+    "week": 4,
+    "theme": "İSTATİSTİKSEL ARAŞTIRMA SÜRECİ",
+    "topic": "Kategorik ve Nicel (Kesikli) Veri Dağılımları",
+    "learningOutcomes": [
+      "Kategorik veya nicel (kesikli) veriye dayanan istatistiksel araştırma gerektiren durumları fark eder",
+      "Kategorik veya nicel (kesikli) veriye dayanan betimleme veya karşılaştırma gerektirebilecek araştırma soruları oluşturur",
+      "Kategorik veya nicel (kesikli) veriye ulaşmak için plan yapar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık",
+      "SDB3.2. Esneklik",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Araştırma tasarımı",
+      "Veri toplama planlama"
+    ],
+    "values": [
+      "D1. Adalet",
+      "D3. Çalışkanlık",
+      "D5. Duyarlılık",
+      "D6. Dürüstlük",
+      "D8. Mahremiyet",
+      "D14. Saygı",
+      "D17. Tasarruf"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Akran değerlendirme formu",
+      "Çalışma kâğıdı",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Hayvanları Koruma Günü"
+    ]
+  },
+  {
+    "week": 5,
+    "theme": "İSTATİSTİKSEL ARAŞTIRMA SÜRECİ",
+    "topic": "Kategorik ve Nicel (Kesikli) Veri Dağılımları",
+    "learningOutcomes": [
+      "Kategorik veya nicel (kesikli) veriye ve araştırma sorusuna uygun anket soruları hazırlar",
+      "Anketi kullanarak veri toplar veya hazır veriye ulaşır",
+      "Veri görselleştirme ve özetleme araçlarını seçme gerekçelerini belirtir"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık",
+      "SDB3.2. Esneklik",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Anket hazırlama",
+      "Araç seçme"
+    ],
+    "values": [
+      "D1. Adalet",
+      "D3. Çalışkanlık",
+      "D5. Duyarlılık",
+      "D6. Dürüstlük",
+      "D8. Mahremiyet",
+      "D14. Saygı",
+      "D17. Tasarruf"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Akran değerlendirme formu",
+      "Çalışma kâğıdı",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Ahilik Kültürü Haftası"
+    ]
+  },
+  {
+    "week": 6,
+    "theme": "İSTATİSTİKSEL ARAŞTIRMA SÜRECİ",
+    "topic": "Kategorik ve Nicel (Kesikli) Veri Dağılımları",
+    "learningOutcomes": [
+      "Toplanan veriyi uygun araçlarla analiz eder",
+      "Araştırma sonuçlarını elde eder",
+      "Araştırmada ulaştığı sonuçlara yönelik gerekçeler sunar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık",
+      "SDB3.2. Esneklik",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Veri analizi",
+      "Sonuç çıkarma"
+    ],
+    "values": [
+      "D1. Adalet",
+      "D3. Çalışkanlık",
+      "D5. Duyarlılık",
+      "D6. Dürüstlük",
+      "D8. Mahremiyet",
+      "D14. Saygı",
+      "D17. Tasarruf"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Akran değerlendirme formu",
+      "Çalışma kâğıdı",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 7,
+    "theme": "İSTATİSTİKSEL ARAŞTIRMA SÜRECİ",
+    "topic": "Kategorik ve Nicel (Kesikli) Veri Dağılımları",
+    "learningOutcomes": [
+      "Araştırma sonuçlarının araştırma sorusuna ne düzeyde cevap verdiğini değerlendirir",
+      "Araştırma süreci adımlarını değerlendirerek araştırma sürecine uygun olmayan adımları yeniden planlar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık",
+      "SDB3.2. Esneklik",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Değerlendirme",
+      "Yeniden planlama"
+    ],
+    "values": [
+      "D1. Adalet",
+      "D3. Çalışkanlık",
+      "D5. Duyarlılık",
+      "D6. Dürüstlük",
+      "D8. Mahremiyet",
+      "D14. Saygı",
+      "D17. Tasarruf"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Akran değerlendirme formu",
+      "Çalışma kâğıdı",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Birleşmiş Milletler Günü"
+    ]
+  },
+  {
+    "week": 8,
+    "theme": "İSTATİSTİKSEL ARAŞTIRMA SÜRECİ",
+    "topic": "İstatistiksel Tartışma",
+    "learningOutcomes": [
+      "Başkaları tarafından oluşturulan kategorik veya nicel veriye dayalı istatistiksel sonuç veya yorumlara yönelik istatistiksel temellendirme yapar",
+      "Başkaları tarafından oluşturulan veriye dayalı istatistiksel sonuç veya yorumlara yönelik hataları ya da yanlılıkları tespit eder",
+      "Başkaları tarafından oluşturulan veriye dayalı istatistiksel sonuç veya yorumları çürütür ya da kabul eder"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık",
+      "SDB3.2. Esneklik",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Eleştirel analiz",
+      "Tartışma"
+    ],
+    "values": [
+      "D1. Adalet",
+      "D3. Çalışkanlık",
+      "D5. Duyarlılık",
+      "D6. Dürüstlük",
+      "D8. Mahremiyet",
+      "D14. Saygı",
+      "D17. Tasarruf"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "Akran değerlendirme formu",
+      "Çalışma kâğıdı",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Okul Temelli Planlama",
+      "Cumhuriyet Bayramı",
+      "Kızılay Haftası"
+    ]
+  },
+  {
+    "week": 9,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesirlerle İşlemler - Ondalık Gösterim",
+    "learningOutcomes": [
+      "Ondalık gösterimlerin basamak değerlerini inceler",
+      "Ondalık gösterimlerin basamak değerlerini paydası 10, 100 ve 1000 olan kesirlerin toplamlarını kullanarak yeniden ifade eder",
+      "Ondalık gösterimlerin basamak değerlerini kendi cümleleriyle açıklar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Basamak değeri analizi",
+      "İfade etme"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Organ Bağışı Haftası",
+      "Lösemili Çocuklar Haftası"
+    ]
+  },
+  {
+    "week": 10,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir ve Bölme İlişkisi",
+    "learningOutcomes": [
+      "Kağıt-kalemle ve hesap makinesinde bölme işlemi gerçekleştirerek kesirlerin ondalık gösterimlerine ilişkin gözlem yapar",
+      "Kesirlerin sonlu ve devirli ondalık gösterimlerine ait örüntüleri belirler",
+      "Örüntülerde keşfedilen ilişkileri geneller"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Gözlem yapma",
+      "Örüntü tanıma",
+      "Genelleme"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "1. Ara Tatil (10-14 Kasım)",
+      "Ağız ve Diş Sağlığı Haftası"
+    ]
+  },
+  {
+    "week": 11,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Standart Uzunluk Ölçme Birimleri",
+    "learningOutcomes": [
+      "Standart ölçme birimlerini kullanarak ölçme yapar",
+      "Ölçme sonuçlarını belirlediği ölçme birimleri ile karşılaştırır",
+      "Karşılaştırmalarına ilişkin yargıda bulunur"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Ölçme",
+      "Karşılaştırma",
+      "Yargıya varma"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Öğretmenler Günü"
+    ]
+  },
+  {
+    "week": 12,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir Ondalık Yüzde Problemleri",
+    "learningOutcomes": [
+      "Kesir, ondalık ve yüzde gösterimleri ile ilgili dört işlem problemlerinde sayı ve işlem bileşenlerini belirler",
+      "Kesir, ondalık ve yüzde gösterimleri ile ilgili dört işlem problemlerinde verilenler ile istenenlerin gerektirdiği işlemler arasındaki ilişkiyi belirler",
+      "Problem bağlamına uygun temsilleri kullanır"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Temsillendirme"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Dünya Engelliler Günü"
+    ]
+  },
+  {
+    "week": 13,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir Ondalık Yüzde Problemleri",
+    "learningOutcomes": [
+      "Kullanılan temsil üzerinden problemi kendi ifadeleri ile açıklar",
+      "Problemlerin sonucuna ilişkin tahminde bulunur ve işlemleri gerçekleştirmek için stratejiler geliştirir",
+      "Stratejileri işe koşarak problemleri çözer"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Açıklama",
+      "Strateji geliştirme",
+      "Uygulama"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "İnsan Hakları ve Demokrasi Haftası"
+    ]
+  },
+  {
+    "week": 14,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir Ondalık Yüzde Problemleri",
+    "learningOutcomes": [
+      "Çözüm yollarını kontrol eder ve çözüme ulaştırmayan stratejiyi değiştirir",
+      "Problemlerin çözümü için kullandığı veya geliştirdiği stratejileri gözden geçirerek kısa yolları değerlendirir",
+      "Kullandığı strateji veya stratejileri farklı problemlerin çözümlerine geneller"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Kontrol etme",
+      "Değerlendirme",
+      "Genelleme"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 15,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir Ondalık Yüzde Problemleri",
+    "learningOutcomes": [
+      "Kesir, ondalık ve yüzde gösterimleri ile ilgili dört işlem problemlerinde sayı ve işlem bileşenlerini belirler",
+      "Çeşitli stratejiler geliştirerek problemleri çözer",
+      "Genellemenin geçerliliğini değerlendirir"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "İnceleme"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 16,
+    "theme": "SAYILAR VE NİCELİKLER (2)",
+    "topic": "Kesir Ondalık Yüzde Problemleri",
+    "learningOutcomes": [
+      "Problem çözüm stratejileri geliştirerek uygular",
+      "Çözüm yollarını kontrol eder ve gerekirse değiştirir"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Strateji geliştirme",
+      "Uygulama"
+    ],
+    "values": [
+      "D4. Dostluk",
+      "D5. Duyarlılık",
+      "D14. Saygı",
+      "D16. Sorumluluk",
+      "D17. Tasarruf",
+      "D18. Temizlik",
+      "D19. Vatanseverlik"
+    ],
+    "literacySkills": [
+      "OB1. Bilgi Okuryazarlığı",
+      "OB3. Finansal Okuryazarlık",
+      "OB8. Sürdürülebilirlik Okuryazarlığı"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Açık uçlu sorular",
+      "İzleme testi",
+      "Sayı kartları",
+      "Görsel kartlar",
+      "Performans görevi"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Okul Temelli Planlama"
+    ]
+  },
+  {
+    "week": 17,
+    "theme": "VERİDEN OLASILIĞA",
+    "topic": "Deneysel Olasılık",
+    "learningOutcomes": [
+      "Bir olayın olasılığı ile deneylerden elde ettiği veriyi ilişkilendirir",
+      "Deneye ait tekrar sayısı ile deneyin çıktılarının göreli sıklıklarının ilişkisine yönelik çıkarım yapar",
+      "Çıkarımlardan hareketle olasılık değerini hesaplama için göreli sıklığın kullanımına yönelik yargıda bulunur"
+    ],
+    "processComponents": [
+      "SDB2.2. İş Birliği"
+    ],
+    "learningSkills": [
+      "Deney tasarımı",
+      "Veri analizi",
+      "Olasılık hesaplama"
+    ],
+    "values": [
+      "D3. Çalışkanlık"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme",
+      "Grup değerlendirme formları"
+    ],
+    "specialDays": [
+      "Enerji Tasarrufu Haftası"
+    ]
+  },
+  {
+    "week": 18,
+    "theme": "VERİDEN OLASILIĞA",
+    "topic": "Deneysel Olasılık",
+    "learningOutcomes": [
+      "Bir olayın olasılığı ile deneylerden elde ettiği veriyi ilişkilendirir",
+      "Deneye ait tekrar sayısı ile deneyin çıktılarının göreli sıklıklarının ilişkisine yönelik çıkarım yapar",
+      "Göreli sıklık kullanarak olasılık değeri hesaplar"
+    ],
+    "processComponents": [
+      "SDB2.2. İş Birliği"
+    ],
+    "learningSkills": [
+      "Deney tekrarı",
+      "Göreli sıklık hesaplama"
+    ],
+    "values": [
+      "D3. Çalışkanlık"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kâğıdı",
+      "Performans görevi",
+      "Öz değerlendirme",
+      "Akran değerlendirme"
+    ],
+    "specialDays": [
+      "Şubat Tatili (19-30 Ocak)"
+    ]
+  },
+  {
+    "week": 19,
+    "theme": "GEOMETRİK ŞEKİLLER",
+    "topic": "İki Paralel Doğrunun Bir Kesen ile Oluşturduğu Açılar",
+    "learningOutcomes": [
+      "Düzlemde iki paralel doğru ve bir kesen ile oluşan açıları belirler",
+      "Düzlemde iki paralel doğru ve bir kesen ile oluşan açıları ayrıştırır",
+      "Bu tasnife göre açıları adlandırır"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.1. İletişim",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Açı sınıflandırması",
+      "Adlandırma"
+    ],
+    "values": [
+      "D3. Çalışkanlık",
+      "D4. Dostluk",
+      "D16. Sorumluluk"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kağıdı",
+      "Performans görevi",
+      "Zihin haritası",
+      "İzleme testi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 20,
+    "theme": "GEOMETRİK ŞEKİLLER",
+    "topic": "Dörtgen Özellikleri",
+    "learningOutcomes": [
+      "Düzlemde iki paralel doğrunun iki kesenle oluşturduğu şekillerin özelliklerine dair varsayımda bulunur",
+      "Oluşan şekilleri çeşitli özelliklerine göre listeler",
+      "Oluşan şekillerin iç açılarının ölçüleri toplamına ilişkin önerme sunar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.1. İletişim",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Varsayım yapma",
+      "Sınıflandırma",
+      "Propozisyon sunma"
+    ],
+    "values": [
+      "D3. Çalışkanlık",
+      "D4. Dostluk",
+      "D16. Sorumluluk"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kağıdı",
+      "Performans görevi",
+      "Zihin haritası",
+      "İzleme testi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 21,
+    "theme": "GEOMETRİK ŞEKİLLER",
+    "topic": "Köşegen Özellikleri",
+    "learningOutcomes": [
+      "Birbirlerini ortalayan doğru parçalarını köşegen kabul eden dörtgenlere yönelik varsayımlarda bulunur",
+      "Birbirlerini ortalayan doğru parçalarını köşegen kabul eden dörtgenleri oluşturur ve listeler",
+      "Dörtgenlerin farklı yollardan tanımlanmasına ilişkin önerme sunar"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.1. İletişim",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Geometrik oluşturma",
+      "Özelliklendirme"
+    ],
+    "values": [
+      "D3. Çalışkanlık",
+      "D4. Dostluk",
+      "D16. Sorumluluk"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kağıdı",
+      "Performans görevi",
+      "Zihin haritası",
+      "İzleme testi"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 22,
+    "theme": "GEOMETRİK ŞEKİLLER",
+    "topic": "Açı Problemleri",
+    "learningOutcomes": [
+      "Üçgen, yamuk, paralelkenar, eşkenar dörtgen, dikdörtgen ve karenin açıları ile ilgili problemlerde matematiksel bileşenleri belirler",
+      "Matematiksel bileşenler arasındaki ilişkiyi belirler",
+      "Problem bağlamındaki temsilleri farklı temsillere dönüştürür"
+    ],
+    "processComponents": [
+      "SDB1.2. Öz Düzenleme",
+      "SDB2.1. İletişim",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Problem analizi",
+      "Temsillendirme"
+    ],
+    "values": [
+      "D3. Çalışkanlık",
+      "D4. Dostluk",
+      "D16. Sorumluluk"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık"
+    ],
+    "assessment": [
+      "Çalışma kağıdı",
+      "Performans görevi",
+      "Zihin haritası",
+      "İzleme testi"
+    ],
+    "specialDays": [
+      "Vergi Haftası",
+      "Yeşilay Haftası"
+    ]
+  },
+  {
+    "week": 23,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Cebirsel İfadeler",
+    "learningOutcomes": [
+      "Gerçek yaşam durumlarında nicelikleri belirler",
+      "Nicelikler arasındaki ilişkileri tablo temsili kullanarak belirler",
+      "Nicelikler arasındaki ilişkileri cebirsel olarak ifade eder"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Nicelik tanıma",
+      "Tablo oluşturma",
+      "Cebirsel ifade yazma"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "Dünya Kadınlar Günü",
+      "Girişimcilik Haftası"
+    ]
+  },
+  {
+    "week": 24,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Cebirsel İfadeler",
+    "learningOutcomes": [
+      "Cebirsel ifadenin anlamını kendi cümleleri ile açıklar",
+      "Yorumladığı cebirsel ifadelere karşılık gelen durumlara yönelik varsayımda bulunur",
+      "Verilen cebirsel ifadelere yönelik varsayımda bulunduğu durumları inceleyerek genellemeleri belirler"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Açıklama",
+      "Yorumlama",
+      "Genelleme"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "Bilim ve Teknoloji Haftası"
+    ]
+  },
+  {
+    "week": 25,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Cebirsel İfadeler",
+    "learningOutcomes": [
+      "Elde ettiği genellemelerin varsayımını karşılayıp karşılamadığını farklı sözel ve cebirsel ifadeler ile sınar",
+      "Doğrulayabileceği sözel ve cebirsel ifadeleri farklı değişken ve değerlerle yeniden ifade eder",
+      "Cebirsel ifadelerin matematiğin farklı alanlarında kullanımı hakkında yargıda bulunur"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Sınama",
+      "İfade yenileme",
+      "Değerlendirme"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "2. Ara Tatil (16-20 Mart)",
+      "Dünya Tiyatrolar Günü",
+      "Orman Haftası"
+    ]
+  },
+  {
+    "week": 26,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Sayı ve Şekil Örüntüleri & Algoritma",
+    "learningOutcomes": [
+      "Sayı ve şekil örüntülerindeki ilişkileri inceler",
+      "İncelediği ilişkileri tablo, grafik ve sözel temsiller aracılığıyla ifade eder",
+      "Cebirsel ifadeler içeren durumlardaki algoritmik yapıyı inceler"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Örüntü analizi",
+      "Algoritma tanıma"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "Kütüphaneler Haftası",
+      "Dünya Otizm Farkındalık Günü"
+    ]
+  },
+  {
+    "week": 27,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Sayı ve Şekil Örüntüleri",
+    "learningOutcomes": [
+      "Sayı ve şekil örüntülerindeki ilişkileri inceler",
+      "İncelediği ilişkileri tablo, grafik ve sözel temsiller aracılığıyla ifade eder",
+      "Farklı temsillerle gösterilen ilişkilerden yola çıkarak örüntülerdeki yapıları cebirsel olarak ifade eder"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Temsillendirme",
+      "Cebirsel ifade yapma"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "Kişisel Verileri Koruma Günü"
+    ]
+  },
+  {
+    "week": 28,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Algoritma Yorumu",
+    "learningOutcomes": [
+      "Cebirsel ifadeler içeren durumlardaki algoritmik yapıyı inceler",
+      "İncelediği durumlardaki algoritmik yapıyı tablo temsiline dönüştürür",
+      "Dönüştürdüğü algoritmik yapının içerdiği matematiksel ilişkileri sözel olarak ifade eder"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "Algoritma dönüştürme",
+      "İlişkilendirme"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "Turizm Haftası"
+    ]
+  },
+  {
+    "week": 29,
+    "theme": "İŞLEMLERLE CEBİRSEL DÜŞÜNME VE DEĞİŞİMLER",
+    "topic": "Algoritma Yorumu",
+    "learningOutcomes": [
+      "Cebirsel ifadeler içeren durumlardaki algoritmik yapıyı inceler",
+      "Algoritmik yapıyı tablo temsiline veya cebirsel ifadelere dönüştürür",
+      "Matematiksel ilişkileri sözel olarak ifade eder"
+    ],
+    "processComponents": [
+      "SDB2.1. İletişim",
+      "SDB2.3. Sosyal Farkındalık"
+    ],
+    "learningSkills": [
+      "İfade etme",
+      "Dönüştürme"
+    ],
+    "values": [
+      "D5. Duyarlılık",
+      "D9. Merhamet",
+      "D17. Tasarruf",
+      "D20. Yardımseverlik"
+    ],
+    "literacySkills": [
+      "OB3. Finansal Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Çalışma kâğıtları",
+      "Performans görevleri"
+    ],
+    "specialDays": [
+      "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"
+    ]
+  },
+  {
+    "week": 30,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Uzunluk ve Alan Ölçme Birimleri",
+    "learningOutcomes": [
+      "Uzunluk ve alan ölçme birimleri arasındaki ilişkileri gözlemler",
+      "Uzunluk ve alan ölçme birimleri arasındaki ilişkiyi tespit eder",
+      "Alan ölçme birimleri arasındaki ilişkiye dair çıkarım yapar"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Gözlem",
+      "İlişki tespit etme",
+      "Çıkarım yapma"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": [
+      "Kût´ül Amâre Zaferi",
+      "Bilişim Haftası",
+      "Trafik ve İlkyardım Haftası"
+    ]
+  },
+  {
+    "week": 31,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Paralelkenar ve Üçgen Alan Bağıntıları",
+    "learningOutcomes": [
+      "Dikdörtgenin alan bağıntısını gözden geçirir",
+      "Dikdörtgenin alan bağıntısından yola çıkarak paralelkenar ve üçgenin alan bağıntıları hakkında çıkarım yapar",
+      "Çıkarımını farklı örnekler üzerinden değerlendirir"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği"
+    ],
+    "learningSkills": [
+      "Transfer etme",
+      "Çıkarım yapma",
+      "Değerlendirme"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": [
+      "Vakıflar Haftası",
+      "Anneler Günü"
+    ]
+  },
+  {
+    "week": 32,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Alan Problemleri",
+    "learningOutcomes": [
+      "Geometrik şekillerin alanları ile modellenen gerçek yaşam probleminde matematiksel bileşenleri belirler",
+      "Matematiksel bileşenler arasındaki ilişkiyi belirler",
+      "Problem bağlamıyla ilişkili verilenleri matematiksel temsillere dönüştürür"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Problem analizi",
+      "Temsillendirme"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": [
+      "Engelliler Haftası"
+    ]
+  },
+  {
+    "week": 33,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Alan Problemleri",
+    "learningOutcomes": [
+      "Matematiksel temsillere dönüştürdüğü problemi kendi ifadeleri ile açıklar",
+      "Problemin sonucuna ilişkin tahminde bulunur ve stratejiler geliştirir",
+      "Belirlediği stratejileri çözüm için uygular"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Açıklama",
+      "Strateji geliştirme",
+      "Uygulama"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": [
+      "Etik Günü",
+      "Atatürk'ü Anma ve Gençlik ve Spor Bayramı"
+    ]
+  },
+  {
+    "week": 34,
+    "theme": "TATİL",
+    "topic": "Kurban Bayramı",
+    "learningOutcomes": [],
+    "processComponents": [],
+    "learningSkills": [],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Kurban Bayramı",
+      "İstanbul´un Fethi"
+    ]
+  },
+  {
+    "week": 35,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Çemberin Uzunluğu",
+    "learningOutcomes": [
+      "Çemberin uzunluğu ile çap uzunluğu arasındaki ilişkiye yönelik varsayımlarda bulunur",
+      "Çemberlerin uzunlukları ile çap uzunlukları arasındaki ilişkileri listeler",
+      "Çemberin uzunluğu ile çap uzunluğu arasındaki ilişkiye yönelik önerme sunar"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Varsayım yapma",
+      "Gözlem",
+      "Propozisyon sunma"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": []
+  },
+  {
+    "week": 36,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Çemberin Uzunluğu",
+    "learningOutcomes": [
+      "Çemberin uzunluğu ile çap uzunluğu arasındaki ilişkiye yönelik varsayımlarda bulunur",
+      "Çemberlerin uzunlukları ile çap uzunlukları arasındaki ilişkileri belirler",
+      "Elde ettiği ilişkiye yönelik değerlendirmeler yapar"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Doğrulama",
+      "Değerlendirme"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": [
+      "Sınav Haftası",
+      "Çevre ve İklim Değişikliği Haftası"
+    ]
+  },
+  {
+    "week": 37,
+    "theme": "GEOMETRİK NİCELİKLER",
+    "topic": "Çemberin Uzunluğu Problemleri",
+    "learningOutcomes": [
+      "Çap veya yarıçap uzunluğu verilen bir çemberin uzunluğu ile ilgili problemlerde matematiksel bileşenleri belirler",
+      "Matematiksel bileşenler arasındaki ilişkiyi belirler",
+      "Problem bağlamıyla ilişkili verilenleri uygun temsillere dönüştürür"
+    ],
+    "processComponents": [
+      "SDB1.3. Öz Yansıtma",
+      "SDB2.1. İletişim",
+      "SDB2.2. İş Birliği",
+      "SDB3.1. Uyum",
+      "SDB3.3. Sorumlu Karar Verme"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Temsillendirme"
+    ],
+    "values": [
+      "D7. Estetik",
+      "D10. Mütevazılık",
+      "D14. Saygı"
+    ],
+    "literacySkills": [
+      "OB2. Dijital Okuryazarlık",
+      "OB4. Görsel Okuryazarlık"
+    ],
+    "assessment": [
+      "İzleme testleri",
+      "Zihin haritası",
+      "Performans görevi",
+      "Çalışma kâğıdı"
+    ],
+    "specialDays": []
+  }
+]

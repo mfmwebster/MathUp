@@ -10,13 +10,124 @@ import {
   ArrowLeft, Camera, User, School, Clock, 
   Calendar, DollarSign, Check 
 } from 'lucide-react';
-import { generateId, generateLessonSchedule } from '../../utils/helpers';
+import { generateId, getScheduleWeeks } from '../../utils/helpers';
+
+const WEEKDAY_OPTIONS = [
+  { value: '1', label: 'Pzt' },
+  { value: '2', label: 'Sal' },
+  { value: '3', label: 'Çar' },
+  { value: '4', label: 'Per' },
+  { value: '5', label: 'Cum' },
+  { value: '6', label: 'Cmt' },
+  { value: '0', label: 'Paz' }
+];
+
+const getMondayWeekStart = (date) => {
+  const d = new Date(date);
+  const day = d.getDay();
+  const diff = day === 0 ? -6 : 1 - day;
+  d.setDate(d.getDate() + diff);
+  d.setHours(0, 0, 0, 0);
+  return d;
+};
+
+const getMondayIndexFromJsDay = (jsDay) => {
+  return jsDay === 0 ? 6 : jsDay - 1;
+};
+
+const toLocalDateKey = (date) => {
+  const d = new Date(date);
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+const parseTimeToMinutes = (timeValue) => {
+  const value = String(timeValue || '').trim();
+  const [hourRaw, minuteRaw = '0'] = value.split(':');
+  const hour = parseInt(hourRaw, 10);
+  const minute = parseInt(minuteRaw, 10);
+  if (Number.isNaN(hour) || Number.isNaN(minute)) return null;
+  return (hour * 60) + minute;
+};
+
+const hasTimeRangeOverlap = (firstLesson, secondLesson) => {
+  if (!firstLesson?.date || !secondLesson?.date || firstLesson.date !== secondLesson.date) return false;
+
+  const firstStart = parseTimeToMinutes(firstLesson.time);
+  const secondStart = parseTimeToMinutes(secondLesson.time);
+  if (firstStart === null || secondStart === null) return false;
+
+  const firstDuration = Math.max(15, parseInt(firstLesson.duration || 60, 10) || 60);
+  const secondDuration = Math.max(15, parseInt(secondLesson.duration || 60, 10) || 60);
+  const firstEnd = firstStart + firstDuration;
+  const secondEnd = secondStart + secondDuration;
+
+  return firstStart < secondEnd && secondStart < firstEnd;
+};
+
+const generateFlexibleLessonSchedule = ({
+  startDate,
+  weekdays,
+  time,
+  duration,
+  endDate,
+  repeatEveryWeeks,
+  unitFee
+}) => {
+  const start = new Date(startDate);
+  start.setHours(0, 0, 0, 0);
+
+  const end = new Date(endDate);
+  end.setHours(23, 59, 59, 999);
+
+  const intervalWeeks = Math.max(1, parseInt(repeatEveryWeeks || '1', 10));
+  const selectedDays = [...new Set((weekdays || ['1']).map((day) => parseInt(day, 10)).filter((day) => !Number.isNaN(day)))];
+  if (selectedDays.length === 0) selectedDays.push(1);
+
+  selectedDays.sort((a, b) => getMondayIndexFromJsDay(a) - getMondayIndexFromJsDay(b));
+
+  const weekStart = getMondayWeekStart(start);
+  const schedule = [];
+  let weekNumber = 1;
+
+  for (let cycle = 0; cycle < 520; cycle += 1) {
+    const cycleFirstDate = new Date(weekStart);
+    cycleFirstDate.setDate(weekStart.getDate() + (cycle * intervalWeeks * 7) + getMondayIndexFromJsDay(selectedDays[0]));
+    if (cycleFirstDate > end) break;
+
+    selectedDays.forEach((dayValue) => {
+      const candidate = new Date(weekStart);
+      candidate.setDate(weekStart.getDate() + (cycle * intervalWeeks * 7) + getMondayIndexFromJsDay(dayValue));
+      candidate.setHours(0, 0, 0, 0);
+
+      if (candidate < start || candidate > end) return;
+
+      schedule.push({
+        week: weekNumber,
+        date: toLocalDateKey(candidate),
+        time,
+        duration,
+        completed: false,
+        topic: null,
+        paymentAmount: parseFloat(unitFee) || 0,
+        paymentStatus: 'pending',
+        paymentCollectedAt: null
+      });
+
+      weekNumber += 1;
+    });
+  }
+
+  return schedule;
+};
 
 const StudentForm = () => {
   const { id } = useParams();
   const isEditing = Boolean(id);
   const navigate = useNavigate();
-  const { addStudent, getStudentById, updateStudent, isReady } = useDatabase();
+  const { addStudent, getStudentById, getStudents, updateStudent, isReady } = useDatabase();
   
   const [formData, setFormData] = useState({
     fullName: '',
@@ -25,6 +136,8 @@ const StudentForm = () => {
     phone: '',
     parentPhone: '',
     lessonDay: '1', // 1=Pazartesi
+    lessonDays: ['1'],
+    recurrenceIntervalWeeks: '1',
     lessonTime: '16:00',
     lessonDuration: '60',
     fee: '',
@@ -52,6 +165,8 @@ const StudentForm = () => {
         phone: student.phone || '',
         parentPhone: student.parentPhone || '',
         lessonDay: student.lessonDay || '1',
+        lessonDays: student.lessonDays || [student.lessonDay || '1'],
+        recurrenceIntervalWeeks: student.recurrenceIntervalWeeks || '1',
         lessonTime: student.lessonTime || '16:00',
         lessonDuration: student.lessonDuration || '60',
         fee: student.fee || '',
@@ -94,9 +209,18 @@ const StudentForm = () => {
     if (duration < 15 || duration > 180) {
       newErrors.lessonDuration = 'Ders süresi 15-180 dakika arası olmalı';
     }
+
+    const recurrenceInterval = parseInt(formData.recurrenceIntervalWeeks || '1', 10);
+    if (Number.isNaN(recurrenceInterval) || recurrenceInterval < 1) {
+      newErrors.recurrenceIntervalWeeks = 'Tekrar aralığı en az 1 hafta olmalı';
+    }
+
+    if (!Array.isArray(formData.lessonDays) || formData.lessonDays.length === 0) {
+      newErrors.lessonDays = 'En az 1 ders günü seçmelisiniz';
+    }
     
-    if (formData.fee && (isNaN(formData.fee) || parseInt(formData.fee) < 0)) {
-      newErrors.fee = 'Ücret pozitif bir sayı olmalı';
+    if (!formData.fee || isNaN(formData.fee) || parseFloat(formData.fee) <= 0) {
+      newErrors.fee = 'Ders başı ücret zorunlu ve 0’dan büyük olmalı';
     }
     
     setErrors(newErrors);
@@ -115,19 +239,77 @@ const StudentForm = () => {
     setLoading(true);
 
     try {
-      // Otomatik ders plani olustur (LGS 2026'ya kadar)
-      const weeksUntilLGS = 37; // Sabit 37 hafta
-      const schedule = generateLessonSchedule(
-        new Date(),
-        formData.lessonDay,
-        formData.lessonTime,
-        parseInt(formData.lessonDuration),
-        weeksUntilLGS
-      );
+      // Ders planı ve ders başı ücret
+      const unitFee = parseFloat(formData.fee) || 0;
+      const existingStudent = isEditing ? await getStudentById(id) : null;
+      const existingInitialFee = parseFloat(existingStudent?.initialFee);
+      const initialFee = isEditing
+        ? ((!Number.isNaN(existingInitialFee) && existingInitialFee > 0) ? existingInitialFee : unitFee)
+        : unitFee;
+      const weeksToSchedule = getScheduleWeeks(formData.grade);
+
+      const startDate = new Date();
+      const endDate = new Date(startDate);
+      endDate.setDate(endDate.getDate() + (weeksToSchedule * 7));
+
+      let schedule = generateFlexibleLessonSchedule({
+        startDate,
+        weekdays: formData.lessonDays,
+        time: formData.lessonTime,
+        duration: parseInt(formData.lessonDuration),
+        endDate,
+        repeatEveryWeeks: formData.recurrenceIntervalWeeks,
+        unitFee: initialFee
+      });
+
+      if (isEditing) {
+        if (existingStudent?.schedule?.length > 0) {
+          schedule = existingStudent.schedule.map((lesson) => ({
+            ...lesson,
+            paymentAmount: (() => {
+              const lessonAmount = parseFloat(lesson.paymentAmount);
+              if (!Number.isNaN(lessonAmount) && lessonAmount > 0) {
+                return lessonAmount;
+              }
+              return initialFee;
+            })(),
+            paymentStatus: lesson.paymentStatus || 'pending',
+            paymentCollectedAt: lesson.paymentCollectedAt || null,
+            paymentDueDate: lesson.paymentDueDate || lesson.date || null
+          }));
+        }
+      }
+
+      const allStudents = await getStudents();
+      const otherStudentsLessons = (allStudents || [])
+        .filter((entry) => entry.id !== (isEditing ? id : null))
+        .flatMap((entry) => (entry.schedule || []).map((lesson) => ({
+          date: lesson.date,
+          time: lesson.time,
+          duration: lesson.duration || entry.lessonDuration || 60
+        })));
+
+      const hasConflict = schedule.some((lesson, index) => {
+        const ownConflict = schedule.some((compareLesson, compareIndex) => {
+          if (compareIndex === index) return false;
+          return hasTimeRangeOverlap(lesson, compareLesson);
+        });
+
+        const globalConflict = otherStudentsLessons.some((otherLesson) => hasTimeRangeOverlap(lesson, otherLesson));
+        return ownConflict || globalConflict;
+      });
+
+      if (hasConflict) {
+        alert('Ders planında saat çakışması var. Lütfen gün/saat veya tekrar aralığını düzenleyin.');
+        setLoading(false);
+        return;
+      }
 
       const studentData = {
         id: isEditing ? id : generateId(),
         ...formData,
+        lessonDay: Array.isArray(formData.lessonDays) && formData.lessonDays.length > 0 ? formData.lessonDays[0] : '1',
+        initialFee,
         schedule,
         createdAt: isEditing ? undefined : new Date().toISOString(),
         updatedAt: new Date().toISOString()
@@ -147,15 +329,30 @@ const StudentForm = () => {
     }
   };
 
-  const days = [
-    { value: '1', label: 'Pazartesi' },
-    { value: '2', label: 'Sali' },
-    { value: '3', label: 'Carsamba' },
-    { value: '4', label: 'Persembe' },
-    { value: '5', label: 'Cuma' },
-    { value: '6', label: 'Cumartesi' },
-    { value: '0', label: 'Pazar' }
-  ];
+  const toggleLessonDay = (dayValue) => {
+    const activeDays = Array.isArray(formData.lessonDays) ? formData.lessonDays : [];
+    const exists = activeDays.includes(dayValue);
+
+    if (exists && activeDays.length === 1) {
+      return;
+    }
+
+    const nextDays = exists
+      ? activeDays.filter((value) => value !== dayValue)
+      : [...activeDays, dayValue];
+
+    const ordered = [...nextDays].sort((a, b) => {
+      const aOrder = getMondayIndexFromJsDay(parseInt(a, 10));
+      const bOrder = getMondayIndexFromJsDay(parseInt(b, 10));
+      return aOrder - bOrder;
+    });
+
+    setFormData({
+      ...formData,
+      lessonDays: ordered,
+      lessonDay: ordered[0] || formData.lessonDay
+    });
+  };
 
   return (
     <div className="page-container pb-24">
@@ -275,18 +472,26 @@ const StudentForm = () => {
           </h2>
 
           <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Gun</label>
-              <select
-                value={formData.lessonDay}
-                onChange={(e) => setFormData({...formData, lessonDay: e.target.value})}
-                className="input-field"
-              >
-                {days.map(day => (
-                  <option key={day.value} value={day.value}>{day.label}</option>
-                ))}
-              </select>
+            <div className="col-span-2">
+              <label className="block text-sm font-medium text-gray-700 mb-1">Ders Günleri</label>
+              <div className="flex flex-wrap gap-2">
+                {WEEKDAY_OPTIONS.map((day) => {
+                  const selected = (formData.lessonDays || []).includes(day.value);
+                  return (
+                    <button
+                      key={day.value}
+                      type="button"
+                      onClick={() => toggleLessonDay(day.value)}
+                      className={'px-3 py-1.5 rounded-full text-sm font-medium border ' + (selected ? 'bg-primary-600 text-white border-primary-600' : 'bg-white text-gray-700 border-gray-300')}
+                    >
+                      {day.label}
+                    </button>
+                  );
+                })}
+              </div>
+              {errors.lessonDays && <p className="text-red-600 text-xs mt-1">{errors.lessonDays}</p>}
             </div>
+
             <div>
               <label className="block text-sm font-medium text-gray-700 mb-1">Saat</label>
               <input
@@ -295,6 +500,17 @@ const StudentForm = () => {
                 onChange={(e) => setFormData({...formData, lessonTime: e.target.value})}
                 className="input-field"
               />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Tekrar Aralığı (Hafta)</label>
+              <input
+                type="number"
+                min="1"
+                value={formData.recurrenceIntervalWeeks}
+                onChange={(e) => setFormData({...formData, recurrenceIntervalWeeks: e.target.value})}
+                className={"input-field " + (errors.recurrenceIntervalWeeks ? 'border-red-500 focus:ring-red-500' : '')}
+              />
+              {errors.recurrenceIntervalWeeks && <p className="text-red-600 text-xs mt-1">{errors.recurrenceIntervalWeeks}</p>}
             </div>
           </div>
 
@@ -314,9 +530,11 @@ const StudentForm = () => {
               {errors.lessonDuration && <p className="text-red-600 text-xs mt-1">{errors.lessonDuration}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">Aylık Ücret (TL)</label>
+              <label className="block text-sm font-medium text-gray-700 mb-1">Ders Başı Ücret (TL)</label>
               <input
                 type="number"
+                required
+                min="1"
                 value={formData.fee}
                 onChange={(e) => setFormData({...formData, fee: e.target.value})}
                 className={"input-field " + (errors.fee ? 'border-red-500 focus:ring-red-500' : '')}
@@ -328,7 +546,7 @@ const StudentForm = () => {
 
           <div className="bg-blue-50 p-3 rounded-lg text-sm text-blue-700">
             <Calendar className="w-4 h-4 inline mr-1" />
-            Otomatik olarak LGS 2026'ya kadar haftalik ders plani olusturulacak.
+            Otomatik ders planı seçilen günler ve tekrar aralığına göre oluşturulur (örn: haftada 2 gün veya 2 haftada 1).
           </div>
         </div>
 

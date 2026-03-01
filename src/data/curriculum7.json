@@ -1,0 +1,1020 @@
+[
+  {
+    "week": 1,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Tam sayılarla toplama ve çıkarma işlemlerini yapar, ilgili problemleri çözer",
+      "Çıkarma işleminin, eksilen ile çıkanın ters işaretlisinin toplamı anlamına geldiğini kavrar",
+      "Tam sayıların kullanıldığı asansör, termometre gibi araçlar yatay, dikey sayı doğrusu gibi modellerle ilişkilendirilir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Toplama işlemi",
+      "Çıkarma işlemi",
+      "Modelleme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 2,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Toplama işleminin özelliklerini akıcı işlem yapmak için birer strateji olarak kullanır",
+      "Toplama işleminin değişme, birleşme, ters eleman ve etkisiz eleman özellikleri ele alınır",
+      "Sırasıyla değişme, birleşme, ters eleman ve etkisiz eleman özelliklerini uygular"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Toplama özellikleri",
+      "Strateji geliştirme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Gaziler Günü",
+      "İlköğretim Haftası"
+    ]
+  },
+  {
+    "week": 3,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Tam sayılarla çarpma ve bölme işlemlerini yapar",
+      "Çarpma işleminin değişme, birleşme, etkisiz eleman, yutan eleman özellikleri incelenir",
+      "Çarpmanın toplama ve çıkarma işlemleri üzerine dağılma özellikleri incelenir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Çarpma işlemi",
+      "Bölme işlemi",
+      "İşlem özellikleri"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Dünya Okul Sütü Günü"
+    ]
+  },
+  {
+    "week": 4,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Tam sayıların kendileri ile tekrarlı çarpımını üslü nicelik olarak ifade eder",
+      "Kuvvetin tek veya çift doğal sayı olması durumları incelenir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Üslü ifadeler",
+      "Kuvvet hesaplama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Hayvanları Koruma Günü"
+    ]
+  },
+  {
+    "week": 5,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Tam sayılarla işlemler yapmayı gerektiren problemleri çözer",
+      "Kuvvetin tek veya çift doğal sayı olması durumları incelenir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Tam sayılar"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Ahilik Kültürü Haftası"
+    ]
+  },
+  {
+    "week": 6,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Tam Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Tam sayılarla işlemler yapmayı gerektiren problemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Problem çözme",
+      "Uygulama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 7,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılar",
+    "learningOutcomes": [
+      "Rasyonel sayıları tanır ve sayı doğrusunda gösterir",
+      "Rasyonel sayıları ondalık gösterimle ifade eder"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Rasyonel sayılar",
+      "Sayı doğrusu",
+      "Ondalık gösterim"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Birleşmiş Milletler Günü"
+    ]
+  },
+  {
+    "week": 8,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılar",
+    "learningOutcomes": [
+      "Devirli olan ve olmayan ondalık gösterimleri rasyonel sayı olarak ifade eder",
+      "Rasyonel sayıları sıralar ve karşılaştırır"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Devirli ondalık gösterim",
+      "Sıralama",
+      "Karşılaştırma"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Sınav Haftası",
+      "Cumhuriyet Bayramı",
+      "Kızılay Haftası"
+    ]
+  },
+  {
+    "week": 9,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Rasyonel sayılarla toplama ve çıkarma işlemlerini yapar",
+      "Rasyonel sayılarda toplama işleminin değişme, birleşme, etkisiz eleman ve ters eleman özellikleri incelenir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Toplama işlemi",
+      "Çıkarma işlemi",
+      "Rasyonel sayılar"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Organ Bağışı Haftası",
+      "Lösemili Çocuklar Haftası"
+    ]
+  },
+  {
+    "week": 10,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Rasyonel sayılarla çarpma ve bölme işlemlerini yapar",
+      "Rasyonel sayılarda çarpma işleminin değişme, birleşme, yutan ve ters eleman özellikleri incelenir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Çarpma işlemi",
+      "Bölme işlemi",
+      "Dağılma özelliği"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "1. Ara Tatil (10-14 Kasım)",
+      "Ağız ve Diş Sağlığı Haftası"
+    ]
+  },
+  {
+    "week": 11,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Rasyonel sayılarla çok adımlı işlemleri yapar",
+      "Çok adımlı işlemlerde hangi işlemin daha önce yapılacağı ayraçlarla belirtilir",
+      "Kesir çizgisi kullanılarak verilen işlemlerde işlem önceliği vurgulanır"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "İşlem sırası",
+      "Çok adımlı işlemler"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Öğretmenler Günü"
+    ]
+  },
+  {
+    "week": 12,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Rasyonel Sayılarla İşlemler",
+    "learningOutcomes": [
+      "Rasyonel sayıların kare ve küplerini hesaplar",
+      "Rasyonel sayılarla işlem yapmayı gerektiren problemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Kare alma",
+      "Küp alma",
+      "Problem çözme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Dünya Engelliler Günü"
+    ]
+  },
+  {
+    "week": 13,
+    "theme": "CEBİR",
+    "topic": "Cebirsel İfadeler",
+    "learningOutcomes": [
+      "Rasyonel sayılarla işlem yapmayı gerektiren problemleri çözer",
+      "Cebirsel ifadelerle toplama ve çıkarma işlemleri yapar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Cebirsel ifadeler",
+      "Toplama işlemi",
+      "Çıkarma işlemi"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "İnsan Hakları ve Demokrasi Haftası"
+    ]
+  },
+  {
+    "week": 14,
+    "theme": "CEBİR",
+    "topic": "Cebirsel İfadeler",
+    "learningOutcomes": [
+      "Bir doğal sayı ile bir cebirsel ifadeyi çarpar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Çarpma işlemi",
+      "Dağılma özelliği"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 15,
+    "theme": "CEBİR",
+    "topic": "Cebirsel İfadeler & Eşitlik ve Denklem",
+    "learningOutcomes": [
+      "Sayı örüntülerinin kuralını harfle ifade eder",
+      "Kuralı harfle ifade edilen örüntünün istenilen terimini bulur",
+      "Eşitliğin korunumu ilkesini anlar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Örüntü tanıma",
+      "Harfle ifade etme",
+      "Eşitlik korunumu"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 16,
+    "theme": "CEBİR",
+    "topic": "Eşitlik ve Denklem",
+    "learningOutcomes": [
+      "Birinci dereceden bir bilinmeyenli denklemi tanır",
+      "Verilen gerçek hayat durumlarına uygun birinci dereceden bir bilinmeyenli denklem kurar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Denklem tanıma",
+      "Denklem kurma"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Sınav Haftası"
+    ]
+  },
+  {
+    "week": 17,
+    "theme": "CEBİR",
+    "topic": "Eşitlik ve Denklem",
+    "learningOutcomes": [
+      "Birinci dereceden bir bilinmeyenli denklemi tanır",
+      "Verilen gerçek hayat durumlarına uygun denklem kurar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Denklem kurmak",
+      "Modelleme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Enerji Tasarrufu Haftası"
+    ]
+  },
+  {
+    "week": 18,
+    "theme": "CEBİR",
+    "topic": "Eşitlik ve Denklem",
+    "learningOutcomes": [
+      "Birinci dereceden bir bilinmeyenli denklemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Denklem çözme",
+      "Cebirsel manipülasyon"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Şubat Tatili (19-30 Ocak)"
+    ]
+  },
+  {
+    "week": 19,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Oran ve Orantı",
+    "learningOutcomes": [
+      "Birinci dereceden bir bilinmeyenli denklem kurmayı gerektiren problemleri çözer",
+      "Oranda çokluklardan birinin 1 olması durumunda diğerinin alacağı değeri belirler"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Oran hesaplama",
+      "Problem çözme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 20,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Oran ve Orantı",
+    "learningOutcomes": [
+      "Oranda çokluklardan birinin 1 olması durumunda diğerinin alacağı değeri belirler",
+      "Birbirine oranı verilen iki çokluktan biri verildiğinde diğerini bulur"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Oran bulma",
+      "Orantı hesaplama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 21,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Oran ve Orantı",
+    "learningOutcomes": [
+      "Gerçek hayat durumlarını inceleyerek iki çokluğun orantılı olup olmadığına karar verir",
+      "Doğru orantılı iki çokluk arasındaki ilişkiyi ifade eder",
+      "Doğru orantılı iki çokluğa ait orantı sabitini belirler ve yorumlar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Orantı analizi",
+      "Orantı sabiti bulma"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 22,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Oran ve Orantı",
+    "learningOutcomes": [
+      "Gerçek hayat durumlarını inceleyerek iki çokluğun ters orantılı olup olmadığına karar verir",
+      "Doğru ve ters orantıyla ilgili problemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Ters orantı",
+      "Problem çözme",
+      "Ölçek, karışım, indirim"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Vergi Haftası",
+      "Yeşilay Haftası"
+    ]
+  },
+  {
+    "week": 23,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Yüzdeler",
+    "learningOutcomes": [
+      "Doğru ve ters orantıyla ilgili problemleri çözer",
+      "Bir çokluğun belirtilen bir yüzdesine karşılık gelen miktarını bulur",
+      "Belirli bir yüzdesi verilen çokluğun tamamını bulur"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Yüzde hesaplama",
+      "Tahmin etme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Dünya Kadınlar Günü",
+      "Girişimcilik Haftası"
+    ]
+  },
+  {
+    "week": 24,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Yüzdeler",
+    "learningOutcomes": [
+      "Bir çokluğu diğer bir çokluğun yüzdesi olarak hesaplar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Yüzde hesaplama",
+      "Karşılaştırma"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Bilim ve Teknoloji Haftası"
+    ]
+  },
+  {
+    "week": 25,
+    "theme": "SAYILAR VE İŞLEMLER",
+    "topic": "Yüzdeler",
+    "learningOutcomes": [
+      "Bir çokluğu belirli bir yüzde ile arttırmaya veya azaltmaya yönelik hesaplamalar yapar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Artış-azalış hesaplama",
+      "Yüzde işlemleri"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "2. Ara Tatil (16-20 Mart)",
+      "Dünya Tiyatrolar Günü"
+    ]
+  },
+  {
+    "week": 26,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Doğrular ve Açılar",
+    "learningOutcomes": [
+      "Yüzde ile ilgili problemleri çözer",
+      "Bir açıyı iki eş açıya ayırarak açıortayı belirler"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Açıortay",
+      "Geometrik çizim"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Kütüphaneler Haftası",
+      "Dünya Otizm Farkındalık Günü"
+    ]
+  },
+  {
+    "week": 27,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Doğrular ve Açılar",
+    "learningOutcomes": [
+      "İki paralel doğruyla bir keseninin oluşturduğu yöndeş, ters, iç ters, dış ters açıları belirler",
+      "Oluşan açıların eş veya bütünler olanlarını belirler",
+      "İlgili problemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Açı sınıflandırması",
+      "Paralel doğrular",
+      "Özellik inceleme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Kişisel Verileri Koruma Günü"
+    ]
+  },
+  {
+    "week": 28,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Çokgenler",
+    "learningOutcomes": [
+      "Düzgün çokgenlerin kenar ve açı özelliklerini açıklar",
+      "Çokgenlerin köşegenlerini, iç ve dış açılarını belirler",
+      "İç açılarının ve dış açılarının ölçüleri toplamını hesaplar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Düzgün çokgen",
+      "Açı toplama",
+      "Köşegen"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Turizm Haftası"
+    ]
+  },
+  {
+    "week": 29,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Çokgenler",
+    "learningOutcomes": [
+      "Dikdörtgen, paralelkenar, yamuk ve eşkenar dörtgeni tanır",
+      "Açı özelliklerini belirler",
+      "Eşkenar dörtgen ve yamuğun alan bağıntılarını oluşturur",
+      "İlgili problemleri çözer"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Dörtgen tanıma",
+      "Alan hesaplama",
+      "Problem çözme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı"
+    ]
+  },
+  {
+    "week": 30,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Çokgenler",
+    "learningOutcomes": [
+      "Üçgen, dikdörtgen, paralelkenar, yamuk veya eşkenar dörtgenden oluşan bileşik şekillerin alanlarını bulur",
+      "Dikdörtgenin çevre uzunluğuyla alanını ilişkilendirir"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Bileşik şekil",
+      "Alan-çevre ilişkisi",
+      "Problem çözme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Kût´ül Amâre Zaferi",
+      "Bilişim Haftası",
+      "Trafik ve İlkyardım Haftası"
+    ]
+  },
+  {
+    "week": 31,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Çember ve Daire",
+    "learningOutcomes": [
+      "Çemberde merkez açıları, gördüğü yayları ve açı ölçüleri arasındaki ilişkileri belirler",
+      "Çemberin ve çember parçasının uzunluğunu hesaplar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Merkez açı",
+      "Çember uzunluğu",
+      "Yay hesaplama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Vakıflar Haftası",
+      "Anneler Günü"
+    ]
+  },
+  {
+    "week": 32,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Çember ve Daire",
+    "learningOutcomes": [
+      "Dairenin ve daire diliminin alanını hesaplar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Daire alanı",
+      "Daire dilimi",
+      "Merkez açı-alan ilişkisi"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Engelliler Haftası"
+    ]
+  },
+  {
+    "week": 33,
+    "theme": "VERİ İŞLEME",
+    "topic": "Veri Analizi",
+    "learningOutcomes": [
+      "Verilere ilişkin çizgi grafiği oluşturur ve yorumlar",
+      "Bir veri grubuna ait ortalama, ortanca ve tepe değeri bulur ve yorumlar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Grafik oluşturma",
+      "İstatistiksel ölçüler",
+      "Veri yorumlama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Etik Günü",
+      "Atatürk'ü Anma ve Gençlik ve Spor Bayramı"
+    ]
+  },
+  {
+    "week": 34,
+    "theme": "VERİ İŞLEME",
+    "topic": "Veri Analizi",
+    "learningOutcomes": [
+      "Bir veri grubuna ilişkin daire grafiğini oluşturur ve yorumlar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Daire grafiği oluşturma",
+      "Veri yorumlama"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "İstanbul´un Fethi"
+    ]
+  },
+  {
+    "week": 35,
+    "theme": "VERİ İŞLEME",
+    "topic": "Veri Analizi",
+    "learningOutcomes": [
+      "Verileri sütun, daire veya çizgi grafiği ile gösterir",
+      "Bu gösterimler arasında uygun olan dönüşümleri yapar"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "Grafik dönüştürme",
+      "Veri temsili"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  },
+  {
+    "week": 36,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Cisimlerin Farklı Yönlerden Görünümleri",
+    "learningOutcomes": [
+      "Üç boyutlu cisimlerin farklı yönlerden iki boyutlu görünümlerini çizer",
+      "Farklı yönlerden görünümlerine ilişkin çizimleri verilen yapıları oluşturur"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "3D görünüm",
+      "2D çizim",
+      "Uzaysal akıl yürütme"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": [
+      "Sınav Haftası",
+      "Çevre ve İklim Değişikliği Haftası"
+    ]
+  },
+  {
+    "week": 37,
+    "theme": "GEOMETRİ VE ÖLÇME",
+    "topic": "Cisimlerin Farklı Yönlerden Görünümleri",
+    "learningOutcomes": [
+      "Üç boyutlu cisimlerin farklı yönlerden iki boyutlu görünümlerini çizer",
+      "Farklı yönlerden görünümlerine ilişkin çizimleri verilen yapıları oluşturur"
+    ],
+    "processComponents": [
+      "Kavram Haritası",
+      "Anlatım",
+      "Soru-Cevap",
+      "Tartışma",
+      "Gözlem",
+      "Gösteri"
+    ],
+    "learningSkills": [
+      "3D görünüm",
+      "Eş küp",
+      "İzometrik çizim"
+    ],
+    "values": [],
+    "literacySkills": [],
+    "assessment": [],
+    "specialDays": []
+  }
+]
