@@ -8,6 +8,7 @@ import {
   Trash2 as TrashIcon, Plus, X, DollarSign
 } from 'lucide-react';
 import { formatShortDate, getDayName } from '../../utils/helpers';
+import { useFeedback } from '../../context/FeedbackContext';
 
 const WEEKDAY_LABELS = ['Pzt', 'Sal', 'Çar', 'Per', 'Cum', 'Cmt', 'Paz'];
 
@@ -95,6 +96,7 @@ const StudentDetail = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { getStudentById, getStudents, updateStudent, deleteStudent, isReady, getExams, deleteExam, getBooks, addBook, updateBook, deleteBook } = useDatabase();
+  const { notify, confirmAction, promptValue } = useFeedback();
   const [student, setStudent] = useState(null);
   const [activeTab, setActiveTab] = useState('schedule');
   const [curriculum, setCurriculum] = useState([]);
@@ -296,7 +298,7 @@ const StudentDetail = () => {
 
   const handleCreateBook = async () => {
     if (!newBook.title || !newBook.totalPages) {
-      alert('Kitap adı ve sayfa sayısını doldurunuz');
+      notify('Kitap adı ve sayfa sayısını doldurunuz', 'warning');
       return;
     }
 
@@ -324,7 +326,7 @@ const StudentDetail = () => {
       setNewBook({ title: '', totalPages: '', curriculum: '5', trackingMode: 'page' });
       setShowNewBookModal(false);
     } catch (error) {
-      alert('Kitap oluşturulamadı: ' + error.message);
+      notify('Kitap oluşturulamadı: ' + error.message, 'error');
     }
   };
 
@@ -339,7 +341,15 @@ const StudentDetail = () => {
   };
 
   const handleDeleteBook = async (bookId) => {
-    if (confirm('Bu kitabı silmek istediğinize emin misiniz?')) {
+    const shouldDelete = await confirmAction({
+      title: 'Kitabı Sil',
+      message: 'Bu kitabı silmek istediğinize emin misiniz?',
+      confirmText: 'Sil',
+      cancelText: 'Vazgeç',
+      danger: true
+    });
+
+    if (shouldDelete) {
       await deleteBook(bookId);
       setBooks(books.filter(b => b.id !== bookId));
     }
@@ -357,7 +367,13 @@ const StudentDetail = () => {
 
   const handleDeleteBookFromDetail = async () => {
     if (!selectedBookDetail) return;
-    const shouldDelete = confirm('Bu kitabı silmek istediğinize emin misiniz?');
+    const shouldDelete = await confirmAction({
+      title: 'Kitabı Sil',
+      message: 'Bu kitabı silmek istediğinize emin misiniz?',
+      confirmText: 'Sil',
+      cancelText: 'Vazgeç',
+      danger: true
+    });
     if (!shouldDelete) return;
 
     await deleteBook(selectedBookDetail.id);
@@ -426,17 +442,17 @@ const StudentDetail = () => {
     const toPage = parseInt(homeworkForm.toPage) || 0;
 
     if (!fromPage || !toPage || !homeworkForm.dueDate) {
-      alert('Lütfen tüm ödev alanlarını doldurun.');
+      notify('Lütfen tüm ödev alanlarını doldurun.', 'warning');
       return;
     }
 
     if (fromPage > toPage) {
-      alert('Başlangıç sayfası, bitiş sayfasından büyük olamaz.');
+      notify('Başlangıç sayfası, bitiş sayfasından büyük olamaz.', 'warning');
       return;
     }
 
     if (fromPage < 1 || toPage > liveBook.totalPages) {
-      alert(`Sayfa aralığı 1 - ${liveBook.totalPages} arasında olmalıdır.`);
+      notify(`Sayfa aralığı 1 - ${liveBook.totalPages} arasında olmalıdır.`, 'warning');
       return;
     }
 
@@ -451,7 +467,7 @@ const StudentDetail = () => {
     );
 
     if (fromPage <= completedPageLimit) {
-      alert(`Bu öğrenci ${completedPageLimit}. sayfaya kadar ilerlemiş görünüyor. Yeni ödev başlangıcı ${completedPageLimit + 1} ve sonrası olmalıdır.`);
+      notify(`Bu öğrenci ${completedPageLimit}. sayfaya kadar ilerlemiş görünüyor. Yeni ödev başlangıcı ${completedPageLimit + 1} ve sonrası olmalıdır.`, 'warning');
       return;
     }
 
@@ -462,7 +478,7 @@ const StudentDetail = () => {
     });
 
     if (overlappingActiveHomework) {
-      alert(`Bu aralık, mevcut aktif ödev (${overlappingActiveHomework.fromPage}-${overlappingActiveHomework.toPage}) ile çakışıyor.`);
+      notify(`Bu aralık, mevcut aktif ödev (${overlappingActiveHomework.fromPage}-${overlappingActiveHomework.toPage}) ile çakışıyor.`, 'warning');
       return;
     }
 
@@ -493,7 +509,27 @@ const StudentDetail = () => {
     if (!targetBook) return;
 
     let nextCurrentPage = targetBook.currentPage || 0;
-    let statusUpdateCancelled = false;
+    let partialCompletedCountInput = null;
+
+    const targetHomework = (targetBook.homeworkLogs || []).find((homework) => homework.id === homeworkId);
+
+    if (status === 'partial' && targetHomework) {
+      const assignedCount = Math.max(1, (targetHomework.toPage - targetHomework.fromPage + 1));
+      const userInput = await promptValue({
+        title: 'Kısmi Ödev Kontrolü',
+        message: `Toplam ${assignedCount} sayfadan kaç sayfa yapıldı?`,
+        defaultValue: String(assignedCount),
+        placeholder: 'Yapılan sayfa sayısı',
+        confirmText: 'Kaydet',
+        cancelText: 'İptal'
+      });
+
+      if (userInput === null) {
+        return;
+      }
+
+      partialCompletedCountInput = Math.max(0, Math.min(parseInt(userInput, 10) || 0, assignedCount));
+    }
 
     const updatedLogs = (targetBook.homeworkLogs || []).map((homework) => {
       if (homework.id !== homeworkId) return homework;
@@ -510,13 +546,7 @@ const StudentDetail = () => {
       );
 
       if (status === 'partial') {
-        const userInput = prompt(`Toplam ${assignedCount} sayfadan kaç sayfa yapıldı?`, String(assignedCount));
-        if (userInput === null) {
-          statusUpdateCancelled = true;
-          return homework;
-        }
-
-        const completedCount = Math.max(0, Math.min(parseInt(userInput) || 0, assignedCount));
+        const completedCount = partialCompletedCountInput ?? 0;
         const completedPage = completedCount > 0
           ? Math.min(homework.fromPage + completedCount - 1, homework.toPage)
           : null;
@@ -559,10 +589,6 @@ const StudentDetail = () => {
 
       return homework;
     });
-
-    if (statusUpdateCancelled) {
-      return;
-    }
 
     const updatedBook = {
       ...targetBook,
@@ -623,7 +649,7 @@ const StudentDetail = () => {
       setStudent(updatedStudent);
     } catch (error) {
       console.error('Ders güncellenirken hata:', error);
-      alert('Ders durumu güncellenemedi.');
+      notify('Ders durumu güncellenemedi.', 'error');
     }
   };
 
@@ -639,14 +665,21 @@ const StudentDetail = () => {
         : unitFee;
 
       if (nextStatus === 'collected' && (!nextAmount || nextAmount <= 0)) {
-        const input = prompt('Bu öğrenci için ders başı ücret girin (TL):', student?.fee ? String(student.fee) : '1000');
+        const input = await promptValue({
+          title: 'Ders Ücreti Girişi',
+          message: 'Bu öğrenci için ders başı ücret girin (TL):',
+          defaultValue: student?.fee ? String(student.fee) : '1000',
+          placeholder: 'Örn: 1250',
+          confirmText: 'Kaydet',
+          cancelText: 'İptal'
+        });
         if (input === null) {
           return;
         }
 
         const parsed = parseFloat(input);
         if (Number.isNaN(parsed) || parsed <= 0) {
-          alert('Lütfen 0’dan büyük geçerli bir ücret girin.');
+          notify('Lütfen 0’dan büyük geçerli bir ücret girin.', 'warning');
           return;
         }
 
@@ -684,7 +717,7 @@ const StudentDetail = () => {
       setStudent(updatedStudent);
     } catch (error) {
       console.error('Tahsilat durumu güncellenirken hata:', error);
-      alert('Tahsilat durumu güncellenemedi.');
+      notify('Tahsilat durumu güncellenemedi.', 'error');
     }
   };
 
@@ -706,14 +739,14 @@ const StudentDetail = () => {
       setStudent(updatedStudent);
     } catch (error) {
       console.error('Finans alanı güncellenirken hata:', error);
-      alert('Finans bilgisi güncellenemedi.');
+      notify('Finans bilgisi güncellenemedi.', 'error');
     }
   };
 
   const handleLessonAmountChange = async (weekIndex, value) => {
     const amount = parseFloat(value);
     if (Number.isNaN(amount) || amount <= 0) {
-      alert('Ders ücreti 0’dan büyük olmalıdır.');
+      notify('Ders ücreti 0’dan büyük olmalıdır.', 'warning');
       return;
     }
 
@@ -749,11 +782,11 @@ const StudentDetail = () => {
       setStudent(updatedStudent);
 
       if (updatedCount > 1) {
-        alert(`Ders ücreti güncellendi. Seçilen dersten sonraki ${updatedCount - 1} bekleyen derse de uygulandı.`);
+        notify(`Ders ücreti güncellendi. Seçilen dersten sonraki ${updatedCount - 1} bekleyen derse de uygulandı.`, 'success');
       }
     } catch (error) {
       console.error('Ders ücreti güncellenirken hata:', error);
-      alert('Ders ücreti güncellenemedi.');
+      notify('Ders ücreti güncellenemedi.', 'error');
     }
   };
 
@@ -774,12 +807,12 @@ const StudentDetail = () => {
     const startDate = bulkPricing.startDate;
 
     if (!startDate) {
-      alert('Lütfen fiyat güncelleme başlangıç tarihi seçin.');
+      notify('Lütfen fiyat güncelleme başlangıç tarihi seçin.', 'warning');
       return;
     }
 
     if (Number.isNaN(amount) || amount <= 0) {
-      alert('Lütfen geçerli bir ders ücreti girin.');
+      notify('Lütfen geçerli bir ders ücreti girin.', 'warning');
       return;
     }
 
@@ -805,7 +838,7 @@ const StudentDetail = () => {
       }
 
       if (updatedCount === 0) {
-        alert('Seçilen tarihten sonra güncellenecek bekleyen ders bulunamadı.');
+        notify('Seçilen tarihten sonra güncellenecek bekleyen ders bulunamadı.', 'info');
         return;
       }
 
@@ -818,10 +851,10 @@ const StudentDetail = () => {
 
       await updateStudent(updatedStudent);
       setStudent(updatedStudent);
-      alert(`Fiyat güncelleme uygulandı. ${updatedCount} bekleyen dersin ücreti güncellendi.`);
+      notify(`Fiyat güncelleme uygulandı. ${updatedCount} bekleyen dersin ücreti güncellendi.`, 'success');
     } catch (error) {
       console.error('Toplu fiyat güncelleme hatası:', error);
-      alert('Toplu fiyat güncellemesi yapılamadı.');
+      notify('Toplu fiyat güncellemesi yapılamadı.', 'error');
     }
   };
 
@@ -973,18 +1006,18 @@ const StudentDetail = () => {
 
   const handleSaveLesson = async () => {
     if (!lessonForm.date || !lessonForm.time) {
-      alert('Lütfen tarih ve saat girin.');
+      notify('Lütfen tarih ve saat girin.', 'warning');
       return;
     }
 
     const amount = parseFloat(lessonForm.amount);
     if (Number.isNaN(amount) || amount <= 0) {
-      alert('Lütfen geçerli bir ders ücreti girin.');
+      notify('Lütfen geçerli bir ders ücreti girin.', 'warning');
       return;
     }
 
     if (lessonForm.addMode === 'untilDate' && lessonForm.untilDate && lessonForm.untilDate < lessonForm.date) {
-      alert('Bitiş tarihi başlangıç tarihinden önce olamaz.');
+      notify('Bitiş tarihi başlangıç tarihinden önce olamaz.', 'warning');
       return;
     }
 
@@ -1060,7 +1093,7 @@ const StudentDetail = () => {
         });
 
         if (addedCount === 0) {
-          alert('Eklenecek yeni ders bulunamadı (aynı tarih/saat dersleri atlandı).');
+          notify('Eklenecek yeni ders bulunamadı (aynı tarih/saat dersleri atlandı).', 'warning');
           return;
         }
       }
@@ -1088,7 +1121,7 @@ const StudentDetail = () => {
       });
 
       if (hasConflict) {
-        alert('Ders saatleri çakışıyor. Lütfen farklı bir saat aralığı seçin.');
+        notify('Ders saatleri çakışıyor. Lütfen farklı bir saat aralığı seçin.', 'warning');
         return;
       }
 
@@ -1105,7 +1138,7 @@ const StudentDetail = () => {
       closeLessonForm();
     } catch (error) {
       console.error('Ders kaydetme hatası:', error);
-      alert('Ders kaydedilemedi.');
+      notify('Ders kaydedilemedi.', 'error');
     }
   };
 
@@ -1159,14 +1192,22 @@ const StudentDetail = () => {
           ? 'Bu ders ve sonraki dersleri silmek istediğinize emin misiniz?\n(Tahsil edilmiş/tamamlanmış dersler takvimden gizlenir.)'
           : 'Tüm dersleri silmek istediğinize emin misiniz?\n(Tahsil edilmiş/tamamlanmış dersler takvimden gizlenir.)';
 
-      if (!confirm(confirmMessage)) {
+      const shouldDelete = await confirmAction({
+        title: 'Ders Silme Onayı',
+        message: confirmMessage,
+        confirmText: 'Sil',
+        cancelText: 'Vazgeç',
+        danger: true
+      });
+
+      if (!shouldDelete) {
         return;
       }
 
       const { nextSchedule, removedCount, hiddenCount } = removeFromSchedule(student.schedule || [], lessonIndex, mode);
 
       if (removedCount === 0 && hiddenCount === 0) {
-        alert('İşlem yapılacak ders bulunamadı.');
+        notify('İşlem yapılacak ders bulunamadı.', 'warning');
         return;
       }
 
@@ -1178,10 +1219,10 @@ const StudentDetail = () => {
 
       await updateStudent(updatedStudent);
       setStudent(updatedStudent);
-      alert(`${removedCount} ders silindi, ${hiddenCount} ders takvimden gizlendi.`);
+      notify(`${removedCount} ders silindi, ${hiddenCount} ders takvimden gizlendi.`, 'success');
     } catch (error) {
       console.error('Ders silme hatası:', error);
-      alert('Ders silinemedi.');
+      notify('Ders silinemedi.', 'error');
     }
   };
 
@@ -1211,7 +1252,7 @@ const StudentDetail = () => {
       setStudent(updatedStudent);
     } catch (error) {
       console.error('Kazanım güncellenirken hata:', error);
-      alert('Kazanım güncellenemedi.');
+      notify('Kazanım güncellenemedi.', 'error');
     }
   };
 
@@ -1221,13 +1262,21 @@ const StudentDetail = () => {
   };
 
   const handleDelete = async () => {
-    if (confirm('Bu öğrenciyi silmek istediğinize emin misiniz?')) {
+    const shouldDelete = await confirmAction({
+      title: 'Öğrenciyi Sil',
+      message: 'Bu öğrenciyi silmek istediğinize emin misiniz?',
+      confirmText: 'Sil',
+      cancelText: 'Vazgeç',
+      danger: true
+    });
+
+    if (shouldDelete) {
       try {
         await deleteStudent(id);
         navigate('/students');
       } catch (error) {
         console.error('Öğrenci silinirken hata:', error);
-        alert('Öğrenci silinirken hata oluştu.');
+        notify('Öğrenci silinirken hata oluştu.', 'error');
       }
     }
   };
@@ -1787,12 +1836,20 @@ const StudentDetail = () => {
                   {/* Sil Butonu */}
                   <button
                     onClick={async () => {
-                      if (confirm('Bu denemeyi silmek istediğinize emin misiniz?')) {
+                      const shouldDelete = await confirmAction({
+                        title: 'Denemeyi Sil',
+                        message: 'Bu denemeyi silmek istediğinize emin misiniz?',
+                        confirmText: 'Sil',
+                        cancelText: 'Vazgeç',
+                        danger: true
+                      });
+
+                      if (shouldDelete) {
                         try {
                           await deleteExam(exam.id);
                           await loadExams();
                         } catch (error) {
-                          alert('Silme hatası: ' + error.message);
+                          notify('Silme hatası: ' + error.message, 'error');
                         }
                       }
                     }}

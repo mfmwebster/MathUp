@@ -11,12 +11,14 @@ import {
   MoreVertical, Trash2, Edit 
 } from 'lucide-react';
 import { formatShortDate, generatePastelColor, getInitials } from '../../utils/helpers';
+import { useFeedback } from '../../context/FeedbackContext';
 
 const StudentList = () => {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [filterGrade, setFilterGrade] = useState('all');
   const { getStudents, deleteStudent, isReady } = useDatabase();
+  const { notify, confirmAction } = useFeedback();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -32,19 +34,27 @@ const StudentList = () => {
       setStudents(data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)));
     } catch (error) {
       console.error('Öğrenciler yüklenemedi:', error);
-      alert('Veri yüklenirken hata oluştu. Lütfen sayfayı yenileyin.');
+      notify('Veri yüklenirken hata oluştu. Lütfen sayfayı yenileyin.', 'error');
     }
   };
 
   const handleDelete = async (id, e) => {
     e.stopPropagation();
-    if (confirm('Bu öğrenciyi silmek istediğinize emin misiniz?')) {
+    const shouldDelete = await confirmAction({
+      title: 'Öğrenciyi Sil',
+      message: 'Bu öğrenciyi silmek istediğinize emin misiniz?',
+      confirmText: 'Sil',
+      cancelText: 'Vazgeç',
+      danger: true
+    });
+
+    if (shouldDelete) {
       try {
         await deleteStudent(id);
         loadStudents();
       } catch (error) {
         console.error('Öğrenci silinirken hata:', error);
-        alert('Öğrenci silinirken hata oluştu.');
+        notify('Öğrenci silinirken hata oluştu.', 'error');
       }
     }
   };

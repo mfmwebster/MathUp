@@ -8,7 +8,7 @@ import { useDatabase } from '../../hooks/useDatabase';
 import { useNavigate } from 'react-router-dom';
 import { 
   Users, Calendar, TrendingUp, 
-  ChevronRight, Plus, Clock 
+  ChevronRight, Plus, Clock, TrendingDown, Wallet
 } from 'lucide-react';
 import { 
   Chart as ChartJS, ArcElement, Tooltip, Legend 
@@ -21,11 +21,15 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+const TurkishLiraIcon = ({ className = '' }) => (
+  <span className={'font-bold leading-none ' + className}>₺</span>
+);
+
 const Dashboard = ({ teacher }) => {
   const [students, setStudents] = useState([]);
   const [exams, setExams] = useState([]);
   const [nextLesson, setNextLesson] = useState(null);
-  const [topStudent, setTopStudent] = useState(null);
+  const [insightIndex, setInsightIndex] = useState(0);
   const [financeData, setFinanceData] = useState({ expected: 0, collected: 0 });
   const { getStudents, getExams, isReady } = useDatabase();
   const navigate = useNavigate();
@@ -45,8 +49,8 @@ const Dashboard = ({ teacher }) => {
     setStudents(studentsData);
     setExams(examsData);
     findNextLesson(studentsData);
-    findTopStudent(studentsData, examsData);
     calculateFinance(studentsData);
+    setInsightIndex(0);
   };
 
   const findNextLesson = (students) => {
@@ -78,90 +82,73 @@ const Dashboard = ({ teacher }) => {
     setNextLesson(closestLesson);
   };
 
-  const findTopStudent = (students, exams) => {
-    if (exams.length === 0 || students.length === 0) return;
-    
-    const studentNets = {};
-    exams.forEach(exam => {
-      if (!studentNets[exam.studentId]) {
-        studentNets[exam.studentId] = { total: 0, count: 0 };
-      }
-      studentNets[exam.studentId].total += exam.net || 0;
-      studentNets[exam.studentId].count += 1;
-    });
-    
-    let bestStudent = null;
-    let bestAvg = -1;
-    
-    Object.entries(studentNets).forEach(([studentId, data]) => {
-      const avg = data.total / data.count;
-      if (avg > bestAvg) {
-        bestAvg = avg;
-        const student = students.find(s => s.id === studentId);
-        if (student) {
-          bestStudent = { ...student, averageNet: avg };
-        }
-      }
-    });
-    
-    setTopStudent(bestStudent);
-  };
-
   const calculateFinance = (students) => {
-    const getLessonAmount = (student, lesson) => {
-      const lessonAmount = parseFloat(lesson?.paymentAmount);
-      if (!Number.isNaN(lessonAmount) && lessonAmount > 0) {
-        return lessonAmount;
-      }
-      const unitFee = parseFloat(student?.initialFee);
-      if (!Number.isNaN(unitFee) && unitFee > 0) {
-        return unitFee;
-      }
-      const currentFee = parseFloat(student?.fee);
-      if (!Number.isNaN(currentFee) && currentFee > 0) {
-        return currentFee;
-      }
-      return 0;
-    };
-
-    const expected = students.reduce(
+    const expectedInKurus = students.reduce(
       (sum, student) =>
-        sum + (student.schedule || []).reduce((lessonSum, lesson) => lessonSum + getLessonAmount(student, lesson), 0),
+        sum + (student.schedule || []).reduce((lessonSum, lesson) => lessonSum + getLessonAmountInKurus(student, lesson), 0),
       0
     );
-    const collected = students.reduce(
+    const collectedInKurus = students.reduce(
       (sum, student) =>
         sum + (student.schedule || [])
           .filter((lesson) => lesson.paymentStatus === 'collected')
-          .reduce((lessonSum, lesson) => lessonSum + getLessonAmount(student, lesson), 0),
+          .reduce((lessonSum, lesson) => lessonSum + getLessonAmountInKurus(student, lesson), 0),
       0
     );
-    setFinanceData({ expected, collected });
+    setFinanceData({ expected: kurusToTry(expectedInKurus), collected: kurusToTry(collectedInKurus) });
+  };
+
+  const parseMoneyToKurus = (value) => {
+    if (value === null || value === undefined) return 0;
+
+    if (typeof value === 'number') {
+      if (!Number.isFinite(value)) return 0;
+      return Math.round(value * 100);
+    }
+
+    const raw = String(value).trim();
+    if (!raw) return 0;
+
+    const normalized = raw
+      .replace(/\s/g, '')
+      .replace(/₺/g, '')
+      .replace(/\./g, '')
+      .replace(',', '.');
+
+    const parsed = Number.parseFloat(normalized);
+    if (!Number.isFinite(parsed)) return 0;
+    return Math.round(parsed * 100);
+  };
+
+  const kurusToTry = (amountInKurus) => amountInKurus / 100;
+
+  const getLessonAmountInKurus = (student, lesson) => {
+    const lessonAmountInKurus = parseMoneyToKurus(lesson?.paymentAmount);
+    if (lessonAmountInKurus > 0) {
+      return lessonAmountInKurus;
+    }
+
+    const unitFeeInKurus = parseMoneyToKurus(student?.initialFee);
+    if (unitFeeInKurus > 0) {
+      return unitFeeInKurus;
+    }
+
+    const currentFeeInKurus = parseMoneyToKurus(student?.fee);
+    if (currentFeeInKurus > 0) {
+      return currentFeeInKurus;
+    }
+
+    return 0;
   };
 
   const getStudentFinance = (student) => {
     const lessons = student.schedule || [];
-    const getLessonAmount = (lesson) => {
-      const lessonAmount = parseFloat(lesson?.paymentAmount);
-      if (!Number.isNaN(lessonAmount) && lessonAmount > 0) {
-        return lessonAmount;
-      }
-      const unitFee = parseFloat(student?.initialFee);
-      if (!Number.isNaN(unitFee) && unitFee > 0) {
-        return unitFee;
-      }
-      const currentFee = parseFloat(student?.fee);
-      if (!Number.isNaN(currentFee) && currentFee > 0) {
-        return currentFee;
-      }
-      return 0;
-    };
 
-    const expected = lessons.reduce((sum, lesson) => sum + getLessonAmount(lesson), 0);
+    const expected = lessons.reduce((sum, lesson) => sum + getLessonAmountInKurus(student, lesson), 0);
     const collected = lessons
       .filter((lesson) => lesson.paymentStatus === 'collected')
-      .reduce((sum, lesson) => sum + getLessonAmount(lesson), 0);
-    return { expected, collected };
+      .reduce((sum, lesson) => sum + getLessonAmountInKurus(student, lesson), 0);
+    return { expected: kurusToTry(expected), collected: kurusToTry(collected) };
   };
 
   const portfolioColors = [
@@ -241,6 +228,104 @@ const Dashboard = ({ teacher }) => {
   const collectionRate = financeData.expected > 0
     ? (financeData.collected / financeData.expected) * 100
     : 0;
+
+  const studentNetRows = Object.values(
+    exams.reduce((acc, exam) => {
+      if (!exam?.studentId) return acc;
+      if (!acc[exam.studentId]) {
+        acc[exam.studentId] = { studentId: exam.studentId, totalNet: 0, examCount: 0 };
+      }
+      acc[exam.studentId].totalNet += exam.net || 0;
+      acc[exam.studentId].examCount += 1;
+      return acc;
+    }, {})
+  ).map((row) => {
+    const student = students.find((item) => item.id === row.studentId);
+    return {
+      ...row,
+      student,
+      averageNet: row.examCount > 0 ? row.totalNet / row.examCount : 0
+    };
+  }).filter((row) => !!row.student);
+
+  const highestNetStudent = studentNetRows.length > 0
+    ? [...studentNetRows].sort((a, b) => b.averageNet - a.averageNet)[0]
+    : null;
+
+  const lowestNetStudent = studentNetRows.length > 0
+    ? [...studentNetRows].sort((a, b) => a.averageNet - b.averageNet)[0]
+    : null;
+
+  const studentFinanceRows = students.map((student) => {
+    const fin = getStudentFinance(student);
+    return {
+      student,
+      expected: fin.expected,
+      collected: fin.collected
+    };
+  });
+
+  const highestCollectedStudent = studentFinanceRows.length > 0
+    ? [...studentFinanceRows].sort((a, b) => b.collected - a.collected)[0]
+    : null;
+
+  const highestExpectedStudent = studentFinanceRows.length > 0
+    ? [...studentFinanceRows].sort((a, b) => b.expected - a.expected)[0]
+    : null;
+
+  const rotatingInsights = [
+    highestNetStudent && {
+      key: 'highest-net',
+      title: 'En Yüksek Net Ortalaması',
+      student: highestNetStudent.student,
+      value: `Ortalama Net: ${highestNetStudent.averageNet.toFixed(2)}`,
+      tone: 'text-green-600',
+      icon: TrendingUp,
+      iconWrapClass: 'bg-green-100',
+      iconClass: 'text-green-600'
+    },
+    lowestNetStudent && {
+      key: 'lowest-net',
+      title: 'En Düşük Net Ortalaması',
+      student: lowestNetStudent.student,
+      value: `Ortalama Net: ${lowestNetStudent.averageNet.toFixed(2)}`,
+      tone: 'text-amber-600',
+      icon: TrendingDown,
+      iconWrapClass: 'bg-amber-100',
+      iconClass: 'text-amber-600'
+    },
+    highestCollectedStudent && {
+      key: 'highest-collected',
+      title: 'En Fazla Gelir Getiren',
+      student: highestCollectedStudent.student,
+      value: `Tahsilat: ${formatCurrency(highestCollectedStudent.collected)}`,
+      tone: 'text-emerald-600',
+      icon: TurkishLiraIcon,
+      iconWrapClass: 'bg-emerald-100',
+      iconClass: 'text-emerald-600'
+    },
+    highestExpectedStudent && {
+      key: 'highest-expected',
+      title: 'En Yüksek Beklenen Getiri',
+      student: highestExpectedStudent.student,
+      value: `Beklenen: ${formatCurrency(highestExpectedStudent.expected)}`,
+      tone: 'text-blue-600',
+      icon: Wallet,
+      iconWrapClass: 'bg-blue-100',
+      iconClass: 'text-blue-600'
+    }
+  ].filter(Boolean);
+
+  const activeInsight = rotatingInsights.length > 0
+    ? rotatingInsights[insightIndex % rotatingInsights.length]
+    : null;
+
+  const rotateInsight = () => {
+    if (rotatingInsights.length <= 1) return;
+    setInsightIndex((prev) => (prev + 1) % rotatingInsights.length);
+  };
+
+  const ActiveInsightIcon = activeInsight?.icon || TrendingUp;
 
   const handleDoughnutClick = (event, elements) => {
     if (!elements || elements.length === 0) return;
@@ -343,30 +428,34 @@ const Dashboard = ({ teacher }) => {
           )}
         </div>
 
-        <div className="card">
+        <div
+          onClick={rotateInsight}
+          className={'card ' + (rotatingInsights.length > 1 ? 'cursor-pointer hover:shadow-md transition-all' : '')}
+        >
           <div className="flex items-center justify-between mb-4">
-            <div className="p-3 bg-purple-100 rounded-xl">
-              <TrendingUp className="w-6 h-6 text-purple-600" />
+            <div className={'p-3 rounded-xl ' + (activeInsight?.iconWrapClass || 'bg-purple-100')}>
+              <ActiveInsightIcon className={'w-6 h-6 ' + (activeInsight?.iconClass || 'text-purple-600')} />
             </div>
             <span className="text-xs text-purple-600 bg-purple-50 px-2 py-1 rounded-full">
-              En Iyi
+              {rotatingInsights.length > 0 ? `${(insightIndex % rotatingInsights.length) + 1}/${rotatingInsights.length}` : 'Bilgi'}
             </span>
           </div>
-          <h3 className="text-gray-600 text-sm mb-1">En Başarılı Öğrenci</h3>
-          {topStudent ? (
+          <h3 className="text-gray-600 text-sm mb-1">Öne Çıkan Öğrenci Bilgisi</h3>
+          {activeInsight ? (
             <>
               <p className="text-lg font-bold text-gray-900 truncate">
-                {topStudent.fullName}
+                {activeInsight.student.fullName}
               </p>
               <p className="text-sm text-gray-600">
-                {topStudent.grade}. Sınıf - {topStudent.school}
+                {activeInsight.title}
               </p>
-              <p className="text-xs text-green-600 mt-1 font-medium">
-                Ortalama Net: {topStudent.averageNet.toFixed(2)}
+              <p className={'text-xs mt-1 font-medium ' + activeInsight.tone}>
+                {activeInsight.value}
               </p>
+              <p className="text-[11px] text-gray-500 mt-2">Kartı tıklayarak sonraki metriğe geç</p>
             </>
           ) : (
-            <p className="text-gray-400 text-sm">Henüz deneme yok</p>
+            <p className="text-gray-400 text-sm">Henüz karşılaştırma için yeterli veri yok</p>
           )}
         </div>
       </div>

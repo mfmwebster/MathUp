@@ -5,18 +5,20 @@
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useDatabase } from '../../hooks/useDatabase';
+import { useDatabase, DB_NAME, DB_VERSION } from '../../hooks/useDatabase';
 import { 
   ArrowLeft, Download, Upload, Trash2, 
   Database, Shield, Info, AlertCircle 
 } from 'lucide-react';
 import { openDB } from 'idb';
+import { useFeedback } from '../../context/FeedbackContext';
 
 const Settings = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
   const { getStudents, getBooks, getExams, getTeacher } = useDatabase();
+  const { confirmAction } = useFeedback();
 
   const exportData = async () => {
     setLoading(true);
@@ -81,12 +83,17 @@ const Settings = () => {
         throw new Error('Geçersiz yedekleme dosyası formatı');
       }
 
-      const confirmation = confirm(
-        `Bu işlem mevcut ${importedData.students.length} öğrenci, ` +
-        `${importedData.exams?.length || 0} deneme ve ` +
-        `${importedData.books?.length || 0} kitap verisini içe aktaracak. ` +
-        `\n\nMevcut veriler silinecek. Devam edilsin mi?`
-      );
+      const confirmation = await confirmAction({
+        title: 'Yedeği İçe Aktar',
+        message:
+          `Bu işlem mevcut ${importedData.students.length} öğrenci, ` +
+          `${importedData.exams?.length || 0} deneme ve ` +
+          `${importedData.books?.length || 0} kitap verisini içe aktaracak.\n\n` +
+          'Mevcut veriler silinecek. Devam edilsin mi?',
+        confirmText: 'İçe Aktar',
+        cancelText: 'Vazgeç',
+        danger: true
+      });
 
       if (!confirmation) {
         setLoading(false);
@@ -94,7 +101,7 @@ const Settings = () => {
       }
 
       // IndexedDB'yi temizle ve yeni verileri ekle
-      const db = await openDB('MathUpDB', 2);
+      const db = await openDB(DB_NAME, DB_VERSION);
       
       // Önce mevcut verileri temizle
       const tx = db.transaction(['students', 'books', 'exams', 'teacher'], 'readwrite');
@@ -153,20 +160,31 @@ const Settings = () => {
   };
 
   const clearAllData = async () => {
-    const confirmation = confirm(
-      'TÜM VERİLER SİLİNECEK!\n\n' +
-      'Bu işlem geri alınamaz. Öğrenci, deneme, kitap ve tüm verileriniz silinecek.\n\n' +
-      'Devam etmek istediğinizden emin misiniz?'
-    );
+    const confirmation = await confirmAction({
+      title: 'Tüm Verileri Sil',
+      message:
+        'TÜM VERİLER SİLİNECEK!\n\n' +
+        'Bu işlem geri alınamaz. Öğrenci, deneme, kitap ve tüm verileriniz silinecek.\n\n' +
+        'Devam etmek istediğinizden emin misiniz?',
+      confirmText: 'Devam Et',
+      cancelText: 'İptal',
+      danger: true
+    });
 
     if (!confirmation) return;
 
-    const doubleCheck = confirm('Son kez soruyoruz: Tüm verileri silmek istediğinizden EMİN MİSİNİZ?');
+    const doubleCheck = await confirmAction({
+      title: 'Son Onay',
+      message: 'Son kez soruyoruz: Tüm verileri silmek istediğinizden EMİN MİSİNİZ?',
+      confirmText: 'Evet, Sil',
+      cancelText: 'Vazgeç',
+      danger: true
+    });
     if (!doubleCheck) return;
 
     setLoading(true);
     try {
-      const db = await openDB('MathUpDB', 2);
+      const db = await openDB(DB_NAME, DB_VERSION);
       const tx = db.transaction(['students', 'books', 'exams', 'errorAnalysis'], 'readwrite');
       
       await Promise.all([

@@ -10,11 +10,13 @@ import {
   ArrowLeft, Calculator, Save, User, BookOpen 
 } from 'lucide-react';
 import { generateId, calculateNet } from '../../utils/helpers';
+import { useFeedback } from '../../context/FeedbackContext';
 
 const ExamForm = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { getStudents, addExam, isReady } = useDatabase();
+  const { notify } = useFeedback();
   const [students, setStudents] = useState([]);
   const [loading, setLoading] = useState(false);
   
@@ -143,7 +145,7 @@ const ExamForm = () => {
       const maxErrorCount = getMaxErrorCount();
 
       if (totalErrorCount > maxErrorCount) {
-        alert(`Toplam hata türü girişi en fazla yanlışın 2 katı olabilir. (Maks: ${maxErrorCount})`);
+        notify(`Toplam hata türü girişi en fazla yanlışın 2 katı olabilir. (Maks: ${maxErrorCount})`, 'warning');
         setLoading(false);
         return;
       }
@@ -163,7 +165,7 @@ const ExamForm = () => {
       navigate(`/exams/analysis/${formData.studentId}`);
     } catch (error) {
       console.error('Sınav kaydedilirken hata:', error);
-      alert('Sınav kaydedilemedi. Lütfen tekrar deneyiniz.');
+      notify('Sınav kaydedilemedi. Lütfen tekrar deneyiniz.', 'error');
     } finally {
       setLoading(false);
     }
@@ -174,7 +176,7 @@ const ExamForm = () => {
     const currentErrorCount = getCurrentErrorCount();
 
     if (currentErrorCount >= maxErrorCount) {
-      alert(`Hata türü girişi sınırına ulaşıldı (Maks: ${maxErrorCount}).`);
+      notify(`Hata türü girişi sınırına ulaşıldı (Maks: ${maxErrorCount}).`, 'warning');
       return;
     }
 

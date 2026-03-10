@@ -7,8 +7,8 @@ import { useState, useEffect, useCallback } from 'react';
 import { openDB } from 'idb';
 import { generateId, generateLessonSchedule, getScheduleWeeks } from '../utils/helpers';
 
-const DB_NAME = 'MathUpDB';
-const DB_VERSION = 3;
+export const DB_NAME = 'MathUpDB';
+export const DB_VERSION = 3;
 
 // Veritabanını başlat
 const initDB = async () => {
@@ -322,12 +322,6 @@ export const useDatabase = () => {
       await db.put('teacher', teacher);
     }
 
-    // if students already present, skip seeding them
-    const count = await db.count('students');
-    if (count > 0) {
-      return teacher;
-    }
-
     const studentsRaw = [
       {
         fullName: 'Ahmet Berk Aksoy',
@@ -371,7 +365,35 @@ export const useDatabase = () => {
       }
     ];
 
+    const existingStudents = await db.getAll('students');
+    const normalizedSeedNames = new Set(
+      studentsRaw.map((item) => String(item.fullName || '').trim().toLowerCase())
+    );
+    const normalizedExistingNames = new Set(
+      existingStudents.map((item) => String(item?.fullName || '').trim().toLowerCase())
+    );
+
+    if (existingStudents.length > 0) {
+      const onlyDefaultSubsetLeft = existingStudents.every((item) => {
+        const normalizedName = String(item?.fullName || '').trim().toLowerCase();
+        return normalizedSeedNames.has(normalizedName);
+      });
+
+      if (!onlyDefaultSubsetLeft) {
+        return teacher;
+      }
+
+      if (existingStudents.length >= studentsRaw.length) {
+        return teacher;
+      }
+    }
+
     for (const s of studentsRaw) {
+      const normalizedName = String(s.fullName || '').trim().toLowerCase();
+      if (normalizedExistingNames.has(normalizedName)) {
+        continue;
+      }
+
       const weeks = getScheduleWeeks(s.grade);
       const student = {
         id: generateId(),

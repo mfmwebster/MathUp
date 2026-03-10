@@ -4,9 +4,21 @@
  */
 
 // Net hesaplama (LGS formatı: 3Y1D)
-export const calculateNet = (correct, wrong) => {
-  const net = correct - (wrong / 3);
-  return Math.max(0, net); // Negatif net olamaz
+export const calculateNet = (correct, wrong, empty = null, totalQuestions = null) => {
+  const safeCorrect = Number.parseFloat(correct) || 0;
+  const safeWrong = Number.parseFloat(wrong) || 0;
+  const safeEmpty = empty === null ? null : (Number.parseFloat(empty) || 0);
+  const safeTotalQuestions = totalQuestions === null ? null : (Number.parseFloat(totalQuestions) || 0);
+
+  if (safeEmpty !== null && safeTotalQuestions !== null) {
+    const sum = safeCorrect + safeWrong + safeEmpty;
+    if (sum !== safeTotalQuestions) {
+      console.warn(`Soru sayısı uyuşmazlığı: ${sum} ≠ ${safeTotalQuestions}`);
+    }
+  }
+
+  const net = safeCorrect - (safeWrong / 3);
+  return Math.max(0, Number.parseFloat(net.toFixed(2))); // Negatif net olamaz
 };
 
 // Tarih formatlama (Türkçe)
@@ -56,19 +68,66 @@ export const formatCurrency = (amount) => {
   }).format(amount);
 };
 
-// Renk üretici (öğrenci kartları için pastel renkler)
+// Takvim uygulamalarına benzer sabit öğrenci renk paleti
+export const STUDENT_COLOR_OPTIONS = [
+  { id: 'blue', label: 'Mavi', hex: '#1a73e8' },
+  { id: 'green', label: 'Yeşil', hex: '#0b8043' },
+  { id: 'purple', label: 'Mor', hex: '#8e24aa' },
+  { id: 'magenta', label: 'Fuşya', hex: '#d81b60' },
+  { id: 'orange', label: 'Turuncu', hex: '#f4511e' },
+  { id: 'yellow', label: 'Sarı', hex: '#f6bf26' },
+  { id: 'teal', label: 'Turkuaz', hex: '#00897b' },
+  { id: 'indigo', label: 'İndigo', hex: '#3949ab' },
+  { id: 'slate', label: 'Gri Mavi', hex: '#5f6368' },
+  { id: 'red', label: 'Kırmızı', hex: '#c62828' }
+];
+
+const hashString = (value) => {
+  const source = String(value || '');
+  let hash = 0;
+  for (let i = 0; i < source.length; i += 1) {
+    hash = ((hash << 5) - hash + source.charCodeAt(i)) | 0;
+  }
+  return Math.abs(hash);
+};
+
+export const getStudentColorOption = (colorId) => {
+  return STUDENT_COLOR_OPTIONS.find((option) => option.id === colorId) || null;
+};
+
+export const getStudentColorHex = (student, fallbackSeed = '') => {
+  const selected = getStudentColorOption(student?.colorId);
+  if (selected) return selected.hex;
+
+  const hash = hashString(student?.id || student?.fullName || fallbackSeed || 'student');
+  return STUDENT_COLOR_OPTIONS[hash % STUDENT_COLOR_OPTIONS.length].hex;
+};
+
+export const hexToRgba = (hex, alpha = 1) => {
+  const value = String(hex || '').replace('#', '').trim();
+  if (!/^[0-9a-fA-F]{6}$/.test(value)) {
+    return `rgba(59, 130, 246, ${alpha})`;
+  }
+
+  const r = parseInt(value.slice(0, 2), 16);
+  const g = parseInt(value.slice(2, 4), 16);
+  const b = parseInt(value.slice(4, 6), 16);
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+};
+
+// Geriye dönük uyumluluk: eski sınıf tabanlı kullanım için renk sınıfı üretir
 export const generatePastelColor = (id) => {
   const colors = [
-    'bg-rose-100 text-rose-800 border-rose-200',
     'bg-blue-100 text-blue-800 border-blue-200',
     'bg-green-100 text-green-800 border-green-200',
-    'bg-amber-100 text-amber-800 border-amber-200',
     'bg-purple-100 text-purple-800 border-purple-200',
+    'bg-pink-100 text-pink-800 border-pink-200',
+    'bg-orange-100 text-orange-800 border-orange-200',
+    'bg-yellow-100 text-yellow-800 border-yellow-200',
     'bg-teal-100 text-teal-800 border-teal-200',
     'bg-indigo-100 text-indigo-800 border-indigo-200',
-    'bg-pink-100 text-pink-800 border-pink-200',
-    'bg-cyan-100 text-cyan-800 border-cyan-200',
-    'bg-orange-100 text-orange-800 border-orange-200'
+    'bg-slate-100 text-slate-800 border-slate-200',
+    'bg-red-100 text-red-800 border-red-200'
   ];
   return colors[id % colors.length];
 };

@@ -11,6 +11,7 @@ import {
   Calendar, DollarSign, Check 
 } from 'lucide-react';
 import { generateId, getScheduleWeeks } from '../../utils/helpers';
+import { useFeedback } from '../../context/FeedbackContext';
 
 const WEEKDAY_OPTIONS = [
   { value: '1', label: 'Pzt' },
@@ -128,6 +129,7 @@ const StudentForm = () => {
   const isEditing = Boolean(id);
   const navigate = useNavigate();
   const { addStudent, getStudentById, getStudents, updateStudent, isReady } = useDatabase();
+  const { notify } = useFeedback();
   
   const [formData, setFormData] = useState({
     fullName: '',
@@ -233,7 +235,7 @@ const StudentForm = () => {
       return;
     }
     if (!isReady) {
-      alert('Veritabanı hazır değil, lütfen bekleyin.');
+      notify('Veritabanı hazır değil, lütfen bekleyin.', 'warning');
       return;
     }
     setLoading(true);
@@ -300,7 +302,7 @@ const StudentForm = () => {
       });
 
       if (hasConflict) {
-        alert('Ders planında saat çakışması var. Lütfen gün/saat veya tekrar aralığını düzenleyin.');
+        notify('Ders planında saat çakışması var. Lütfen gün/saat veya tekrar aralığını düzenleyin.', 'warning');
         setLoading(false);
         return;
       }
@@ -323,7 +325,7 @@ const StudentForm = () => {
 
       navigate('/students');
     } catch (error) {
-      alert('Hata: ' + error.message);
+      notify('Hata: ' + error.message, 'error');
     } finally {
       setLoading(false);
     }
